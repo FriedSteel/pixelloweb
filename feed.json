@@ -1,0 +1,27 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Night Owl",
+    "description": "",
+    "home_page_url": "http://nightowlapp.ml",
+    "feed_url": "http://nightowlapp.ml/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Night Owl"
+    },
+    "items": [
+        {
+            "id": "http://nightowlapp.ml/breaking-bad.html",
+            "url": "http://nightowlapp.ml/breaking-bad.html",
+            "title": "Breaking Bad",
+            "summary": "Season 1 Season 2",
+            "content_html": "<p>Season 1</p>\n<p>Season 2</p>",
+            "author": {
+                "name": "Night Owl"
+            },
+            "tags": [
+            ],
+            "date_published": "2019-05-27T00:08:32+05:30",
+            "date_modified": "2019-05-27T00:08:32+05:30"
+        }
+    ]
+}
