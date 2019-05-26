@@ -10,18 +10,18 @@
     },
     "items": [
         {
-            "id": "http://nightowlapp.ml/2.html",
-            "url": "http://nightowlapp.ml/2.html",
-            "title": "Breaking Bad",
-            "summary": "Season 1 Season 2",
-            "content_html": "<p>Season 1</p>\n<p>Season 2</p>",
+            "id": "http://nightowlapp.ml/3.html",
+            "url": "http://nightowlapp.ml/3.html",
+            "title": "Breaking Bad : S2",
+            "summary": "Select Episode: Episode 1 Episode 2 Episode 3 Episode 4 Episode 5&hellip;",
+            "content_html": "<p><strong>Select Episode:</strong></p>\n<p>Episode 1<br>Episode 2<br>Episode 3<br>Episode 4<br>Episode 5<br>Episode 6<br>Episode 7</p>",
             "author": {
                 "name": "Night Owl"
             },
             "tags": [
             ],
-            "date_published": "2019-05-27T00:08:32+05:30",
-            "date_modified": "2019-05-27T00:41:27+05:30"
+            "date_published": "2019-05-27T00:48:04+05:30",
+            "date_modified": "2019-05-27T00:48:04+05:30"
         }
     ]
 }

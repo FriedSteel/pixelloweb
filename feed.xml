@@ -3,30 +3,30 @@
     <title>Night Owl</title>
     <link href="http://nightowlapp.ml/feed.xml" rel="self" />
     <link href="http://nightowlapp.ml" />
-    <updated>2019-05-27T00:42:36+05:30</updated>
+    <updated>2019-05-27T00:49:10+05:30</updated>
     <author>
         <name>Night Owl</name>
     </author>
     <id>http://nightowlapp.ml</id>
 
     <entry>
-        <title>Breaking Bad</title>
+        <title>Breaking Bad : S2</title>
         <author>
             <name>Night Owl</name>
         </author>
-        <link href="http://nightowlapp.ml/2.html"/>
-        <id>http://nightowlapp.ml/2.html</id>
+        <link href="http://nightowlapp.ml/3.html"/>
+        <id>http://nightowlapp.ml/3.html</id>
 
-        <updated>2019-05-27T00:41:27+05:30</updated>
+        <updated>2019-05-27T00:48:04+05:30</updated>
             <summary>
                 <![CDATA[
-                    Season 1 Season 2
+                    Select Episode: Episode 1 Episode 2 Episode 3 Episode 4 Episode 5&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>Season 1</p>
-<p>Season 2</p>
+                <p><strong>Select Episode:</strong></p>
+<p>Episode 1<br>Episode 2<br>Episode 3<br>Episode 4<br>Episode 5<br>Episode 6<br>Episode 7</p>
             ]]>
         </content>
     </entry>
