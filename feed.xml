@@ -3,7 +3,7 @@
     <title>Night Owl</title>
     <link href="http://nightowlapp.ml/feed.xml" rel="self" />
     <link href="http://nightowlapp.ml" />
-    <updated>2019-06-08T11:21:57+05:30</updated>
+    <updated>2019-06-08T11:25:41+05:30</updated>
     <author>
         <name>Night Owl</name>
     </author>
@@ -17,15 +17,15 @@
         <link href="http://nightowlapp.ml/49.html"/>
         <id>http://nightowlapp.ml/49.html</id>
 
-        <updated>2019-06-08T11:21:33+05:30</updated>
+        <updated>2019-06-08T11:25:34+05:30</updated>
             <summary>
                 <![CDATA[
-                    is ds ccjd dcmdkc
+                    is ds cc dccc
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p class="dropcap">is ds ccjd<br>dcmdkc</p>
+                <p class="msg msg--info">is ds cc<br>dccc</p>
             ]]>
         </content>
     </entry>
