@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Night Owl Movies</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"><span>Night Owl</span></h1>
+    <div class="wrapper">
+      <div class="company-info">
+        <h3>Night Owl Movies</h3>
+
+      </div>
+      <div class="add">
+        <h3>Add a Movie:</h3>
+
+        <div class="add" id="rdb_div">
+        </div>
+
+        <div class="add" id="uid_div">
+        </div>
+
+        <div class="alert">Movie Added!</div>
+
+        <form id="addMoviesForm">
+          <p>
+            <label>RDB name</label>
+            <input type="text" id="rdbName" required>
+          </p>
+          <p>
+              <label>Firestore name</label>
+              <input type="text" id="fsName" required>
+            </p>
+            <p>
+              <label>UID</label>
+              <input type="number" id="uid" required>
+              </p>
+          <p>
+            <label>Title</label>
+            <input type="text" name="title" id="title" required>
+          </p>
+          <p>
+            <label>Year</label>
+            <input type="number" name="year" id="year" required>
+          </p>
+          <p>
+            <label>URL</label>
+            <input type="text" name="url" id="url" required>
+          </p>
+          <p>
+            <label>quality</label>
+            <input type="text" name="quality" id="quality" required>
+          </p>
+          <p>
+            <label>Audio</label>
+            <input type="text" name="audio" id="audio" required>
+          </p>
+          <p>
+            <label>Image</label>
+            <input type="text" name="image" id="image" required>
+          </p>
+          <p>
+            <label>YouTube</label>
+            <input type="text" name="youtube" id="youtube" required>
+          </p>
+          <p>
+            <label>Size</label>
+            <input type="text" name="size" id="size" required>
+          </p>
+        <br>
+          <p>
+            <label>URL 480p</label>
+            <input type="text" name="url480" id="url480">
+          </p>
+          <p>
+            <label>quality 480p</label>
+            <input type="text" name="quality480" id="quality480">
+          </p>
+          <p>
+            <label>Audio 480p</label>
+            <input type="text" name="audio480" id="audio480">
+          </p>
+          <p>
+            <label>Size 480p</label>
+            <input type="text" name="size480" id="size480">
+          </p>
+		
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+  
+  <script src="main.js"></script>
+</body>
+</html>
