@@ -9,10 +9,10 @@
 
 <channel>
 	<title>Pixello</title>
-	<atom:link href="https://friedsteel.github.io/pixelloweb-test/feed/" rel="self" type="application/rss+xml" />
-	<link>https://friedsteel.github.io/pixelloweb-test</link>
+	<atom:link href="https://pixello.fun/feed/" rel="self" type="application/rss+xml" />
+	<link>https://pixello.fun</link>
 	<description>Affordable Premium Accounts</description>
-	<lastBuildDate>Wed, 22 Dec 2021 08:18:38 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 22 Dec 2021 08:42:48 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,9 +21,9 @@
 	<generator>https://wordpress.org/?v=5.8.2</generator>
 
 <image>
-	<url>https://friedsteel.github.io/pixelloweb-test/wp-content/uploads/2021/12/pixello_white_transparent_256-256.png</url>
+	<url>https://pixello.fun/wp-content/uploads/2021/12/pixello_white_transparent_256-256.png</url>
 	<title>Pixello</title>
-	<link>https://friedsteel.github.io/pixelloweb-test</link>
+	<link>https://pixello.fun</link>
 	<width>32</width>
 	<height>32</height>
 </image> 

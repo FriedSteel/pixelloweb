@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://friedsteel.github.io/pixelloweb-test/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://pixello.fun/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://friedsteel.github.io/pixelloweb-test/</loc>
+		<loc>https://pixello.fun/</loc>
 		<lastmod>2021-12-22T08:18:38+00:00</lastmod>
 		<image:image>
-			<image:loc>https://friedsteel.github.io/pixelloweb-test/wp-content/uploads/2021/12/1_20211220_211402_0000.png</image:loc>
+			<image:loc>https://pixello.fun/wp-content/uploads/2021/12/1_20211220_211402_0000.png</image:loc>
 			<image:title><![CDATA[pixello-thumbnail]]></image:title>
 		</image:image>
 		<image:image>
-			<image:loc>https://friedsteel.github.io/pixelloweb-test/wp-content/uploads/2021/12/magzter-logo.png</image:loc>
+			<image:loc>https://pixello.fun/wp-content/uploads/2021/12/magzter-logo.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://friedsteel.github.io/pixelloweb-test/wp-content/uploads/2021/12/109096943_10157389109972694_7002764079167571898_n.png</image:loc>
+			<image:loc>https://pixello.fun/wp-content/uploads/2021/12/109096943_10157389109972694_7002764079167571898_n.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://friedsteel.github.io/pixelloweb-test/wp-content/uploads/2021/12/placeholder-logo-removebg-preview.png</image:loc>
+			<image:loc>https://pixello.fun/wp-content/uploads/2021/12/placeholder-logo-removebg-preview.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://friedsteel.github.io/pixelloweb-test/wp-content/uploads/2021/12/scribd-icon-svgrepo-com.svg</image:loc>
+			<image:loc>https://pixello.fun/wp-content/uploads/2021/12/scribd-icon-svgrepo-com.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://friedsteel.github.io/pixelloweb-test/wp-content/uploads/2021/12/calm_logo.png</image:loc>
+			<image:loc>https://pixello.fun/wp-content/uploads/2021/12/calm_logo.png</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>https://friedsteel.github.io/pixelloweb-test/accounts-tc/</loc>
-		<lastmod>2021-12-22T06:57:03+00:00</lastmod>
+		<loc>https://pixello.fun/accounts-tc/</loc>
+		<lastmod>2021-12-22T08:42:48+00:00</lastmod>
 		<image:image>
-			<image:loc>https://friedsteel.github.io/pixelloweb-test/wp-content/uploads/2021/12/1_20211220_211402_0000.png</image:loc>
+			<image:loc>https://pixello.fun/wp-content/uploads/2021/12/1_20211220_211402_0000.png</image:loc>
 			<image:title><![CDATA[pixello-thumbnail]]></image:title>
 		</image:image>
 	</url>
