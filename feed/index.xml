@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Pixello</title>
-	<atom:link href="https://pixello.fun/feed/" rel="self" type="application/rss+xml" />
-	<link>https://pixello.fun</link>
+	<atom:link href="https://pixello.co.in/feed/" rel="self" type="application/rss+xml" />
+	<link>https://pixello.co.in</link>
 	<description>Affordable Premium Accounts</description>
 	<lastBuildDate>Sat, 05 Feb 2022 09:19:33 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -21,9 +21,9 @@
 	<generator>https://wordpress.org/?v=5.9</generator>
 
 <image>
-	<url>https://pixello.fun/wp-content/uploads/2022/01/pixello_white_256-256.png</url>
+	<url>https://pixello.co.in/wp-content/uploads/2022/01/pixello_white_256-256.png</url>
 	<title>Pixello</title>
-	<link>https://pixello.fun</link>
+	<link>https://pixello.co.in</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
