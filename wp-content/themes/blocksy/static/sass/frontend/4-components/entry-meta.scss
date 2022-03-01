@@ -1,12 +1,16 @@
 .entry-meta {
-	--itemsSpacing: 9px;
+	--items-spacing: 9px;
 
 	li {
-		display: inline;
-		margin-right: var(--itemsSpacing);
+		// display: inline;
+		display: inline-block;
+
+		&:not(:last-of-type) {
+			margin-inline-end: var(--items-spacing);
+		}
 
 		&:after {
-			margin-left: var(--itemsSpacing);
+			margin-inline-start: var(--items-spacing);
 		}
 
 		svg,
@@ -18,13 +22,13 @@
 		}
 
 		> span {
-			margin-right: 5px;
+			margin-inline-end: 5px;
 		}
 	}
 
 	[class*="ct-image-container"] {
-		margin-right: 10px;
 		border-radius: 100%;
+		margin-inline-end: 10px;
 
 		+ svg {
 			display: none;
@@ -32,13 +36,13 @@
 	}
 
 	svg {
-		margin-right: 7px;
 		fill: currentColor;
+		margin-inline-end: 7px;
 	}
 
 	// meta style
 	&[data-type*="none"] li:not(:last-of-type) {
-		--itemsSpacing: 20px;
+		--items-spacing: 20px;
 	}
 
 	&[data-type*="slash"] li:not(:last-of-type) {

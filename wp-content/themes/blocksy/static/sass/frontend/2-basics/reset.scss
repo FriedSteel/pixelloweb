@@ -125,7 +125,7 @@ a,
 button {
 	&:focus {
 		transition: none;
-		outline-offset: 3px;
+		outline-offset: var(--outline-offset, 3px);
 		outline-color: var(--paletteColor2);
 	}
 }

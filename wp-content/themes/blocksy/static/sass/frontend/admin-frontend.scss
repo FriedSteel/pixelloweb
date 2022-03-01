@@ -228,3 +228,9 @@ $drop-size: 22px;
 .customize-partial-refreshing {
 	opacity: 0.25 !important;
 }
+
+// admin bar shift when overlay opens
+[data-panel] #wpadminbar {
+	padding-right: var(--scrollbar-width, 0px);
+}
+

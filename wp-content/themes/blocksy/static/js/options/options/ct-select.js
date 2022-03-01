@@ -10,6 +10,7 @@ import {
 import { maybeTransformUnorderedChoices } from '../helpers/parse-choices.js'
 import Downshift from 'downshift'
 import classnames from 'classnames'
+import { __ } from 'ct-i18n'
 
 import usePopoverMaker from '../helpers/usePopoverMaker'
 
@@ -271,8 +272,8 @@ const Select = ({
 							})}
 							placeholder={
 								search && isOpen
-									? searchPlaceholder || 'Type to search...'
-									: placeholder || 'Select value...'
+									? searchPlaceholder || __('Type to search...', 'blocksy')
+									: placeholder || __('Select value...', 'blocksy')
 							}
 							disabled={orderedChoices.length === 0}
 							readOnly={search ? !isOpen : true}

@@ -3,13 +3,10 @@
 		opacity: 0;
 		visibility: hidden;
 		pointer-events: none;
-		transition: opacity 0.2s ease, 
-					visibility 0.2s ease, 
-					transform 0.2s ease,
-					margin 0.2s ease;
+		transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease,
+			margin 0.2s ease;
 	}
 
-	&:hover,
 	&.ct-active {
 		> .sub-menu {
 			opacity: 1;
@@ -25,7 +22,6 @@
 		transform: translate3d(0, 10px, 0);
 	}
 
-	&:hover,
 	&.ct-active {
 		> .sub-menu {
 			transform: translate3d(0, 0, 0);
@@ -42,7 +38,6 @@
 			transform 0.5s cubic-bezier(0.35, 0.81, 0.41, 1);
 	}
 
-	&:hover,
 	&.ct-active {
 		> .sub-menu {
 			> li {

@@ -42,9 +42,9 @@ const Border = ({ value, option, onChange }) => {
 					data-style={value.inherit ? 'none' : value.style}
 					onClick={() => setIsOpen(!isOpen)}>
 					{value.inherit
-						? __('Inherit', 'blc')
+						? __('Inherit', 'blocksy')
 						: value.style === 'none'
-						? value.style
+						? __('none', 'blocksy')
 						: null}
 				</span>
 				<OutsideClickHandler
@@ -99,7 +99,7 @@ const Border = ({ value, option, onChange }) => {
 											}}
 											data-style={style}>
 											{style === 'none'
-												? __('None', 'blocks')
+												? __('None', 'blocksy')
 												: null}
 										</span>
 									))}

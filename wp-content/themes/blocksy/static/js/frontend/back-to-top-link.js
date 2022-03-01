@@ -1,3 +1,4 @@
+import ctEvents from 'ct-events'
 import { areWeDealingWithSafari } from '../main'
 
 export const mount = (backTop) => {
@@ -23,15 +24,8 @@ export const mount = (backTop) => {
 
 	compute()
 
-	window.addEventListener('scroll', () => {
-		if (scrolling) return
-
-		scrolling = true
-
-		requestAnimationFrame(() => {
-			compute()
-			scrolling = false
-		})
+	ctEvents.on('ct:scroll:render-frame', () => {
+		compute()
 	})
 
 	backTop.addEventListener('click', (event) => {

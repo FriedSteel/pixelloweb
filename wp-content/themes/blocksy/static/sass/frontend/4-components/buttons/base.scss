@@ -1,15 +1,18 @@
 $buttons-base:
+	// 'button',
 	'.button',
 	'.submit',
 	'.ct-button',
 	'.added_to_cart',
 	'.ct-button-ghost',
 	'[type="submit"]',
-	'button[class*="ajax"]',
 	'.wp-block-button .wp-block-button__link',
 	'.wp-block-file .wp-block-file__button',
-	// '.forminator-design--none .forminator-button',
 	'.forminator-ui[data-design="none"] .forminator-button',
+
+	// special buttons
+	'button[class*="ajax"]',
+	'button.regform-button',
 ;
 
 

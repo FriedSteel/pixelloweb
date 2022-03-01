@@ -401,7 +401,7 @@ export const getPostListingVariables = () => ({
 
 	[`${prefix}_cardDivider`]: {
 		selector: applyPrefixFor('[data-cards="simple"] .entry-card', prefix),
-		variable: 'border',
+		variable: 'card-border',
 		type: 'border',
 	},
 

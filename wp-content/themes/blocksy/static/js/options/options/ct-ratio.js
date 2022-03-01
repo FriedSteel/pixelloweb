@@ -3,7 +3,7 @@ import {
 	Component,
 	useState,
 	useRef,
-	Fragment
+	Fragment,
 } from '@wordpress/element'
 import cls from 'classnames'
 import { __, sprintf } from 'ct-i18n'
@@ -18,7 +18,7 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 		hasOriginalRatio = true,
 		// popup | inline
 		view = 'popup',
-		preview_width_key = null
+		preview_width_key = null,
 	} = option || {}
 
 	const [currentModalTab, setCurrentTab] = useState('ratio')
@@ -30,7 +30,7 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 
 	const [{ isPicking, isTransitioning }, setAnimationState] = useState({
 		isPicking: false,
-		isTransitioning: false
+		isTransitioning: false,
 	})
 
 	const isReversed =
@@ -56,14 +56,14 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 					<li
 						onClick={() => setCurrentTab('ratio')}
 						className={cls({
-							active: currentModalTab === 'ratio'
+							active: currentModalTab === 'ratio',
 						})}>
 						{__('Image Ratio', 'blocksy')}
 					</li>
 					<li
 						onClick={() => setCurrentTab('size')}
 						className={cls({
-							active: currentModalTab === 'size'
+							active: currentModalTab === 'size',
 						})}>
 						{__('Image Size', 'blocksy')}
 					</li>
@@ -74,13 +74,13 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 				{currentModalTab === 'ratio' && (
 					<div
 						className={cls('ct-ratio-picker', {
-							reversed: isReversed
+							reversed: isReversed,
 						})}>
 						<ul className="ct-radio-option ct-buttons-group">
 							{hasOriginalRatio && (
 								<li
 									className={cls({
-										active: currentTab === 'original'
+										active: currentTab === 'original',
 									})}
 									onClick={() => {
 										if (value !== 'original') {
@@ -92,7 +92,7 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 							)}
 							<li
 								className={cls({
-									active: currentTab === 'predefined'
+									active: currentTab === 'predefined',
 								})}
 								onClick={() => {
 									if (
@@ -110,7 +110,7 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 							</li>
 							<li
 								className={cls({
-									active: currentTab === 'custom'
+									active: currentTab === 'custom',
 								})}
 								onClick={() => {
 									if (
@@ -138,12 +138,12 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 										'1/1',
 										...(isReversed
 											? reversed_ratios
-											: normal_ratios)
-									].map(ratio => (
+											: normal_ratios),
+									].map((ratio) => (
 										<li
 											key={ratio}
 											className={cls({
-												active: ratio === value
+												active: ratio === value,
 											})}
 											onClick={() => onChange(ratio)}>
 											{ratio}
@@ -152,7 +152,7 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 								</ul>
 
 								<button
-									onClick={e => {
+									onClick={(e) => {
 										e.preventDefault()
 
 										if (value === '1/1') {
@@ -162,7 +162,7 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 
 										let [
 											first_component,
-											second_component
+											second_component,
 										] = value.split('/')
 
 										setIsReversed(
@@ -186,7 +186,7 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 										type="text"
 										value={value.split(':')[0]}
 										onChange={({
-											target: { value: val }
+											target: { value: val },
 										}) => {
 											onChange(
 												`${val}:${value.split(':')[1]}`
@@ -200,7 +200,7 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 										type="text"
 										value={value.split(':')[1]}
 										onChange={({
-											target: { value: val }
+											target: { value: val },
 										}) => {
 											onChange(
 												`${value.split(':')[0]}:${val}`
@@ -219,7 +219,7 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 											),
 											'<a href="https://www.digitalrebellion.com/webapps/aspectcalc" target="_blank">',
 											'</a>'
-										)
+										),
 									}}
 								/>
 							</div>
@@ -265,18 +265,18 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 
 					setAnimationState({
 						isTransitioning: false,
-						isPicking: false
+						isPicking: false,
 					})
 				}}
 				wrapperProps={{
-					onClick: e => {
+					onClick: (e) => {
 						e.preventDefault()
 
 						setAnimationState({
 							isTransitioning: true,
-							isPicking: !isPicking
+							isPicking: !isPicking,
 						})
-					}
+					},
 				}}>
 				{value.indexOf(':') > -1 && (
 					<span className="ct-ratio-key">
@@ -308,16 +308,16 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 				option={option}
 				isPicking={isPicking}
 				isTransitioning={isTransitioning}
-				onPickingChange={isPicking => {
+				onPickingChange={(isPicking) => {
 					setAnimationState({
 						isTransitioning: true,
-						isPicking
+						isPicking,
 					})
 				}}
 				stopTransitioning={() =>
 					setAnimationState({
 						isPicking,
-						isTransitioning: false
+						isTransitioning: false,
 					})
 				}
 				renderContent={() => inlineRatioView}
@@ -329,8 +329,8 @@ const Ratio = ({ option, value, onChange, onChangeFor, values }) => {
 Ratio.ControlEnd = () => (
 	<div
 		className="ct-color-modal-wrapper"
-		onMouseDown={e => e.stopPropagation()}
-		onMouseUp={e => e.stopPropagation()}
+		onMouseDown={(e) => e.stopPropagation()}
+		onMouseUp={(e) => e.stopPropagation()}
 	/>
 )
 

@@ -32,7 +32,7 @@
 	// }
 
 	.ct-image-tab,
-	.ct-gradient-tab {
+	[class*="ct-gradient-tab"] {
 		overflow-y: scroll;
 		overflow-x: hidden;
 	}

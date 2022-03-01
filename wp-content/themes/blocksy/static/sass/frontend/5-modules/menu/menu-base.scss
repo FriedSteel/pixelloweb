@@ -1,25 +1,14 @@
 .menu {
 	display: flex;
 
-	// a:not(:empty) {
-	// 	display: flex;
-	// 	align-items: center;
-	// 	position: relative;
-	// 	text-align: initial;
-	// 	padding: var(--menu-item-padding, 0px);
-	// 	border-radius: var(--menu-item-radius, inherit);
-	// }
+	li {
+		&.menu-item,
+		&.page_item {
+			display: flex;
+			align-items: center;
+		}
+	}
 }
-
-.ct-menu-link:not(:empty) {
-	display: flex;
-	align-items: center;
-	position: relative;
-	text-align: initial;
-	padding: var(--menu-item-padding, 0px);
-	border-radius: var(--menu-item-radius, inherit);
-}
-
 
 // first level
 .menu > li > .ct-menu-link {
@@ -27,6 +16,17 @@
 	justify-content: var(--menu-item-alignment, center);
 	height: var(--menu-item-height, 100%);
 	--menu-item-padding: 0 calc(var(--menu-items-spacing, 25px) / 2);
+}
+
+// .ct-menu-link:not(:empty),
+.ct-menu-link {
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	// text-align: initial;
+	padding: var(--menu-item-padding, 0px);
+	border-radius: var(--menu-item-radius, inherit);
 }
 
 

@@ -4,37 +4,55 @@ import _ from '_'
 import $ from 'jquery'
 import { __ } from 'ct-i18n'
 
+import { normalizeColor } from '../../helpers/normalize-color'
+
 const ColorPickerIris = ({ onChange, value, value: { color } }) => {
+	const isNew = wp.components.GradientPicker
+
 	return (
 		<div
 			className={
-				wp.components.GradientPicker
+				isNew
 					? 'ct-gutenberg-color-picker-new'
 					: 'ct-gutenberg-color-picker'
 			}>
 			<ColorPicker
 				color={color}
 				enableAlpha
-				onChangeComplete={(result) => {
-					if (result.rgb) {
+				{...(isNew
+					? {
+							onChange: (color) => {
+								onChange({
+									...value,
+									color: normalizeColor(color),
+								})
+							},
+					  }
+					: {
+							onChangeComplete: (result) => {
+								onChange({
+									...value,
+									color:
+										result.rgb.a === 1
+											? result.hex
+											: `rgba(${result.rgb.r}, ${result.rgb.g}, ${result.rgb.b}, ${result.rgb.a})`,
+								})
+							},
+					  })}
+			/>
+
+			<div className="ct-color-picker-value">
+				<input
+					onChange={({ target: { value: color } }) => {
 						onChange({
 							...value,
-							color:
-								result.rgb.a === 1
-									? result.hex
-									: `rgba(${result.rgb.r}, ${result.rgb.g}, ${result.rgb.b}, ${result.rgb.a})`,
+							color: normalizeColor(color),
 						})
-
-						return
-					}
-
-					onChange({
-						...value,
-						color:
-							color.getAlpha() === 1 ? hex : color.toRgbString(),
-					})
-				}}
-			/>
+					}}
+					value={normalizeColor(color)}
+					type="text"
+				/>
+			</div>
 		</div>
 	)
 }

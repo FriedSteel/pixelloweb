@@ -1,11 +1,3 @@
-.sub-menu {
-	// --menu-item-padding: var(--dropdown-items-spacing, 13px) calc(var(--dropdown-items-spacing, 13px) * 1.5);
-
-	// li {
-	// 	border-top: var(--dropdown-divider);
-	// }
-}
-
 .menu > .menu-item:not([class*="ct-mega-menu"]) {
 	.sub-menu li:first-child {
 		border-top: none;
@@ -16,8 +8,7 @@
 [data-dropdown*='solid'] .sub-menu li,
 [data-dropdown*='padded'] .sub-menu li {
 	a:hover,
-	&.current-menu-item > a,
-	&.current-menu-ancestor > a {
+	&.current-menu-item > a {
 		background-color: var(--dropdown-background-hover-color, rgba(255, 255, 255, 0.03));
 	}
 }
@@ -52,8 +43,8 @@
 
 	// apply top/bottom margin only to regular dropdowns (not mega menu)
 	> ul > li:not([class*="ct-mega-menu"]) .sub-menu li {
-		display: flex;
-		flex-direction: column;
+		// display: flex;
+		// flex-direction: column;
 
 		&:first-child > a {
 			margin-top: calc(8px + (1 - var(--has-divider)) * 8px);

@@ -2,37 +2,25 @@
 	--default-editor: var(--false);
 }
 
-// default template first sections
-.ct-elementor-default-template .site-main {
+// .ct-elementor-default-template .site-main,
+.ct-elementor-default-template {
 
-	.elementor-top-section:not(.ct-section-stretched) {
+	.elementor-top-section:not(.ct-section-stretched):not(.elementor-sticky) {
 		margin-left: var(--has-wide, auto);
 		margin-right: var(--has-wide, auto);
 		width: var(--block-width, var(--container-width));
 		max-width: var(--block-max-width, var(--container-max-width));
 	}
 
-	// .elementor-top-section .elementor-top-section {
-	// 	width: initial;
-	// }
-}
-
-// section container max width
-section.elementor-section {
-	&.elementor-section-boxed > .elementor-container {
-		// width: #{'min(100%, var(--has-wide, var(--block-width, var(--container-width))))'};
-		// max-width: var(--has-wide, var(--block-max-width, var(--container-max-width)));
-
+	.elementor-section-boxed > .elementor-container {
 		width: var(--block-width, var(--container-width));
 		max-width: var(--block-max-width, var(--container-max-width));
 	}
-}
 
-// full width section container width
-section.ct-section-stretched {
-	&.elementor-section-boxed > .elementor-container {
-		// width: #{'min(100%, var(--has-wide, var(--block-width, var(--container-width))))'};
-	}
+	// .elementor-sticky--active {
+	// 	left: 50%;
+	// 	transform: translateX(-50%);
+	// }
 }
 
 
@@ -64,13 +52,6 @@ section.ct-section-stretched {
 		margin-top: 0;
 	}
 }
-
-
-// heading line height fix
-// .elementor-heading-title {
-// 	line-height: var(--lineHeight);
-// }
-
 
 // colors
 :root {

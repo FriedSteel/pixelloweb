@@ -17,6 +17,17 @@
 }
 
 .wcppec-checkout-buttons__separator,
+#wc-square-wallet-divider,
+#wcpay-payment-request-button-separator,
 #wc-stripe-payment-request-button-separator {
 	display: none !important;
+}
+
+// Square payment method adjustments
+div#wc-square-digital-wallet {
+	max-width: 100%;
+}
+
+div.wc-square-wallet-buttons {
+	width: 100%;
 }

@@ -6,6 +6,6 @@
 		object-fit: initial;
 		object-position: initial;
 		transition: opacity 0.1s ease !important;
-		background: var(--zoom-image-background, var(--background-color))
+		background: var(--zoom-image-background, #fff)
 	}
 }

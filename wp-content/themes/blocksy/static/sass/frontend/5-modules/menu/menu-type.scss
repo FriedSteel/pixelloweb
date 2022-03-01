@@ -1,7 +1,7 @@
 // common
 [data-menu] > ul > li {
-	display: flex;
-	align-items: center;
+	// display: flex;
+	// align-items: center;
 	
 	> a {
 		&:before, &:after {
@@ -26,18 +26,6 @@
 		&:after {
 			bottom: var(--menu-indicator-y-position, 0);
 		}
-	}
-}
-
-
-// type 1
-[data-menu*="type-1"] > ul > li {
-	&:first-child > a {
-		padding-inline-start: 0;
-	}
-
-	&:last-child > a {
-		padding-inline-end: 0;
 	}
 }
 
@@ -75,7 +63,6 @@
 		--menu-indicator-width: calc(100% - var(--menu-items-spacing, 25px));
 	}
 }
-
 
 // type 3
 [data-menu*="type-3"] > ul > li {

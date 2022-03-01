@@ -224,7 +224,7 @@ const BoxShadowModal = ({
 										className={classnames({
 											active: !value.inset,
 										})}>
-										Outline
+										{__('Outline', 'blocksy')}
 									</li>
 									<li
 										onClick={() =>
@@ -236,7 +236,7 @@ const BoxShadowModal = ({
 										className={classnames({
 											active: value.inset,
 										})}>
-										Inset
+										{__('Inset', 'blocksy')}
 									</li>
 								</ul>
 							)}

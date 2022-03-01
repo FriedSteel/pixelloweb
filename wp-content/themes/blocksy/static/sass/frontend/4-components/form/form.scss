@@ -3,7 +3,10 @@ textarea,
 input[type='url'],
 input[type='tel'],
 input[type='text'],
+input[type='time'], // added on Dec 10th
 input[type='date'],
+input[type='datetime'], // added on Dec 10th
+input[type='datetime-local'],
 input[type='email'],
 input[type='number'],
 input[type='search'],

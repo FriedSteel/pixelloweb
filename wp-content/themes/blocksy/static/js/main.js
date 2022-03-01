@@ -29,6 +29,11 @@ export const areWeDealingWithSafari = /apple/i.test(navigator.vendor)
 
 export { getCurrentScreen } from './frontend/helpers/current-screen'
 
+import {
+	fastOverlayHandleClick,
+	fastOverlayMount,
+} from './frontend/fast-overlay'
+
 export const allFrontendEntryPoints = [
 	...menuEntryPoints,
 	...liveSearchEntryPoints,
@@ -105,14 +110,14 @@ export const allFrontendEntryPoints = [
 
 	{
 		els: ['.ct-modal-action'],
-		load: () => import('./frontend/overlay'),
+		load: () => new Promise((r) => r({ mount: fastOverlayMount })),
 		events: ['ct:header:update'],
 		trigger: ['click'],
 	},
 
 	{
 		els: ['.ct-header-search'],
-		load: () => import('./frontend/overlay'),
+		load: () => new Promise((r) => r({ mount: fastOverlayMount })),
 		mount: ({ mount, el, ...rest }) => {
 			mount(el, {
 				...rest,
@@ -132,27 +137,6 @@ const initOverlayTrigger = () => {
 	;[
 		...document.querySelectorAll('.ct-header-trigger'),
 		...document.querySelectorAll('.ct-offcanvas-trigger'),
-		...document.querySelectorAll('.ct-header-search'),
-		...document.querySelectorAll('.ct-open-quick-view'),
-		...document.querySelectorAll(
-			'.ct-header-account[href*="account-modal"]'
-		),
-	].map((menuToggle) => {
-		menuToggle.addEventListener(
-			'mouseover',
-			(event) => {
-				const maybeMatchingContainer = ct_localizations.dynamic_styles_selectors.find(
-					(descriptor) => descriptor.selector === '.ct-panel'
-				)
-
-				loadStyle(maybeMatchingContainer.url).then(() => {})
-			},
-			{ once: true }
-		)
-	})
-	;[
-		...document.querySelectorAll('.ct-header-trigger'),
-		...document.querySelectorAll('.ct-offcanvas-trigger'),
 	].map((menuToggle) => {
 		if (menuToggle && !menuToggle.hasListener) {
 			menuToggle.hasListener = true
@@ -160,38 +144,30 @@ const initOverlayTrigger = () => {
 			menuToggle.addEventListener('click', (event) => {
 				event.preventDefault()
 
-				if (!menuToggle.hash) {
+				if (!menuToggle.dataset.togglePanel && !menuToggle.hash) {
 					return
 				}
 
-				let offcanvas = document.querySelector(menuToggle.hash)
+				let offcanvas = document.querySelector(
+					menuToggle.dataset.togglePanel || menuToggle.hash
+				)
 
 				if (!offcanvas) {
 					return
 				}
 
-				import('./frontend/overlay').then(({ handleClick }) =>
-					handleClick(event, {
-						container: offcanvas,
-						closeWhenLinkInside: !menuToggle.closest(
-							'.ct-header-cart'
-						),
-						computeScrollContainer: () =>
-							offcanvas.querySelector('.cart_list') &&
-							!offcanvas.querySelector(
-								'[data-id="cart"] .cart_list'
-							)
-								? offcanvas.querySelector('.cart_list')
-								: getCurrentScreen() === 'mobile' &&
-								  offcanvas.querySelector(
-										'[data-device="mobile"]'
-								  )
-								? offcanvas.querySelector(
-										'[data-device="mobile"]'
-								  )
-								: offcanvas.querySelector('.ct-panel-content'),
-					})
-				)
+				fastOverlayHandleClick(event, {
+					container: offcanvas,
+					closeWhenLinkInside: !menuToggle.closest('.ct-header-cart'),
+					computeScrollContainer: () =>
+						offcanvas.querySelector('.cart_list') &&
+						!offcanvas.querySelector('[data-id="cart"] .cart_list')
+							? offcanvas.querySelector('.cart_list')
+							: getCurrentScreen() === 'mobile' &&
+							  offcanvas.querySelector('[data-device="mobile"]')
+							? offcanvas.querySelector('[data-device="mobile"]')
+							: offcanvas.querySelector('.ct-panel-content'),
+				})
 			})
 		}
 	})
@@ -288,6 +264,10 @@ if ($) {
 		ctEvents.trigger('blocksy:frontend:init')
 	})
 
+	jQuery(document).on('yith-wcan-ajax-filtered', function () {
+		ctEvents.trigger('blocksy:frontend:init')
+	})
+
 	$(document).on('berocket_ajax_filtering_end', () => {
 		setTimeout(() => {
 			ctEvents.trigger('blocksy:frontend:init')
@@ -317,14 +297,21 @@ ctEvents.on('blocksy:frontend:init', () => {
 	initOverlayTrigger()
 })
 
-ctEvents.on('ct:overlay:handle-click', ({ e, href, options = {} }) => {
-	import('./frontend/overlay').then(({ handleClick }) => {
-		handleClick(e, {
-			container: document.querySelector(href),
+ctEvents.on(
+	'ct:overlay:handle-click',
+	({ e, href, container, options = {} }) => {
+		fastOverlayHandleClick(e, {
+			...(href
+				? {
+						container: document.querySelector(href),
+				  }
+				: {}),
+
+			...(container ? { container } : {}),
 			...options,
 		})
-	})
-})
+	}
+)
 
 export { loadStyle, handleEntryPoints, onDocumentLoaded } from './helpers'
 export { markImagesAsLoaded } from './frontend/lazy-load-helpers'

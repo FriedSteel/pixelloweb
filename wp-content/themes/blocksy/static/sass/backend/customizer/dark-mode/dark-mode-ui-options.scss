@@ -487,6 +487,15 @@
 		}
 	}
 
+	.components-popover__content {
+		background: $background_light;
+	}
+
+	.ct-color-picker-value,
+	.components-popover__content {
+		border-color: $border !important;
+	}
+
 	// option modal tabs
 	.ct-modal-tabs {
 		li {

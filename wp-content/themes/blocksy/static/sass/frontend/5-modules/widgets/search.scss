@@ -1,7 +1,6 @@
 form.search-form {
 	position: relative;
 
-	// input
 	input {
 		position: relative;
 
@@ -14,19 +13,15 @@ form.search-form {
 		}
 	}
 
-	// button
 	button {
-		// display: flex;
-		// align-items: center;
-		// justify-content: center;
 		position: absolute;
 		top: 0;
 		right: 0;
-		// cursor: pointer;
-		// border: initial;
 		padding: initial;
 		width: var(--search-button-size, var(--form-field-height, 40px));
 		min-height: var(--search-button-size, var(--form-field-height, 40px));
+		border: none; // For elementor global styles
+		box-shadow: none; // For elementor global styles
 		border-radius: var(--search-button-border-radius, 0px);
 		background: var(--search-button-background);
 		transition: background 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -49,6 +44,8 @@ form.search-form {
 
 	button:hover,
 	input:focus + button {
+		border: none; // For elementor global styles
+		box-shadow: none; // For elementor global styles
 		background: var(--search-button-focus-background);
 
 		svg {

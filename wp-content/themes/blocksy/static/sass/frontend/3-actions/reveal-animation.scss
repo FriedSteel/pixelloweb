@@ -2,7 +2,6 @@
 	transition-property: opacity, transform;
 	transition-duration: 1.5s;
 	transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
-	// will-change: opacity, transform;
 
 	&[data-reveal*='no'] {
 		opacity: 0;

@@ -132,7 +132,8 @@ export const menuEntryPoints = [
 				return hasResponsive
 			})
 
-			return allResults.filter((r) => !!r).length > 0
+			let finalRes = allResults.filter((r) => !!r).length > 0
+			return finalRes
 		},
 	},
 

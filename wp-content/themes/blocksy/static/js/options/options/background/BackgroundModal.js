@@ -74,8 +74,14 @@ const BackgroundModal = ({
 						'ct-image-tab ct-options-container':
 							value.background_type === 'image' ||
 							value.background_type === 'pattern',
-						'ct-gradient-tab ct-color-picker-modal':
+						'ct-color-picker-modal':
 							value.background_type === 'gradient',
+						'ct-gradient-tab':
+							value.background_type === 'gradient' &&
+							window.wp.components.__experimentalGradientPicker,
+						'ct-gradient-tab-new':
+							value.background_type === 'gradient' &&
+							!window.wp.components.__experimentalGradientPicker,
 						'ct-color-tab': value.background_type === 'color',
 					},
 					'ct-modal-tabs-content'

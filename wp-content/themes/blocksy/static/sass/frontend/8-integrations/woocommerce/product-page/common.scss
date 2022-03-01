@@ -1,8 +1,5 @@
 .product[class*="gallery"] {
 	form.cart {
-		
-		// margin-bottom: var(--form-margin-bottom, -10px);
-
 		&:before, &:after {
 			content: '';
 			display: table;

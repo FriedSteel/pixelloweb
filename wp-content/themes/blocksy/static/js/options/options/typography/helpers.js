@@ -1,3 +1,5 @@
+import { __ } from 'ct-i18n'
+
 export const fontFamilyToCSSFamily = (family) => {
 	if (family === 'System Default') {
 		return "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
@@ -62,7 +64,7 @@ export const humanizeVariationsShort = (variation) => {
 		i8: '800',
 		n9: '900',
 		i9: '900',
-		Default: 'Default',
+		Default: __('Default', 'blocksy'),
 	}
 
 	return all[variation]
@@ -70,25 +72,25 @@ export const humanizeVariationsShort = (variation) => {
 
 export const humanizeVariations = (variation) => {
 	var all = {
-		n1: 'Thin 100',
-		i1: 'Thin 100 Italic',
-		n2: 'Extra-Light 200',
-		i2: 'Extra-Light 200 Italic',
-		n3: 'Light 300',
-		i3: 'Light 300 Italic',
-		n4: 'Regular',
-		i4: 'Regular 400 Italic',
-		n5: 'Medium 500',
-		i5: 'Medium 500 Italic',
-		n6: 'Semi-Bold 600',
-		i6: 'Semi-Bold 600 Italic',
-		n7: 'Bold 700',
-		i7: 'Bold 700 Italic',
-		n8: 'Extra-Bold 800',
-		i8: 'Extra-Bold 800 Italic',
-		n9: 'Ultra-Bold 900',
-		i9: 'Ultra-Bold 900 Italic',
-		Default: 'Default Weight',
+		n1: __('Thin 100', 'blocksy'),
+		i1: __('Thin 100 Italic', 'blocksy'),
+		n2: __('Extra-Light 200', 'blocksy'),
+		i2: __('Extra-Light 200 Italic', 'blocksy'),
+		n3: __('Light 300', 'blocksy'),
+		i3: __('Light 300 Italic', 'blocksy'),
+		n4: __('Regular', 'blocksy'),
+		i4: __('Regular 400 Italic', 'blocksy'),
+		n5: __('Medium 500', 'blocksy'),
+		i5: __('Medium 500 Italic', 'blocksy'),
+		n6: __('Semi-Bold 600', 'blocksy'),
+		i6: __('Semi-Bold 600 Italic', 'blocksy'),
+		n7: __('Bold 700', 'blocksy'),
+		i7: __('Bold 700 Italic', 'blocksy'),
+		n8: __('Extra-Bold 800', 'blocksy'),
+		i8: __('Extra-Bold 800 Italic', 'blocksy'),
+		n9: __('Ultra-Bold 900', 'blocksy'),
+		i9: __('Ultra-Bold 900 Italic', 'blocksy'),
+		Default: __('Default Weight', 'blocksy'),
 	}
 
 	return all[variation]
@@ -109,6 +111,10 @@ export const familyForDisplay = (family) => {
 			.replace(/([-_][a-z])/gi, ($1) =>
 				$1.toUpperCase().replace('-', ' ').replace('_', ' ')
 			)
+	}
+
+	if (family === 'System Default') {
+		return __('System Default', 'blocksy')
 	}
 
 	return family
