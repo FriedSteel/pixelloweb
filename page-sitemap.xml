@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://pixello.co.in/</loc>
-		<lastmod>2022-05-28T13:41:16+00:00</lastmod>
+		<lastmod>2022-06-11T14:14:23+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/1_20211220_211402_0000.png</image:loc>
 		</image:image>
@@ -82,28 +82,6 @@
 		<lastmod>2022-03-26T09:59:42+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/1_20211220_211402_0000.png</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://pixello.co.in/draft-pricing/</loc>
-		<lastmod>2022-05-21T13:35:16+00:00</lastmod>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/02/hohs8swq3kxoldxg0crz.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/05/Voot_app_icon_2018.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/05/Zee5_Official_logo.svg.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/05/sonyliv-logo-freelogovectors.net_.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/05/zoom-logo-41644.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/05/4-46500_imagica-logo-hd-png-download.png</image:loc>
 		</image:image>
 	</url>
 </urlset>
