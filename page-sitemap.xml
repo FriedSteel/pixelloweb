@@ -82,17 +82,17 @@
 		<lastmod>2022-06-18T05:25:37+00:00</lastmod>
 	</url>
 	<url>
-		<loc>https://pixello.co.in/pay/</loc>
-		<lastmod>2022-06-18T08:33:47+00:00</lastmod>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/06/UPI-QR-pixello@icici.jpeg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://pixello.co.in/services-directive/</loc>
 		<lastmod>2022-06-19T09:23:26+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/1_20211220_211402_0000.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://pixello.co.in/pay/</loc>
+		<lastmod>2022-06-19T10:08:43+00:00</lastmod>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/06/UPI-QR-pixello@icici.jpeg</image:loc>
 		</image:image>
 	</url>
 </urlset>
