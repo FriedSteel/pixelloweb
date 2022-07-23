@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://pixello.co.in/</loc>
-		<lastmod>2022-07-17T14:34:35+00:00</lastmod>
+		<lastmod>2022-07-23T11:46:16+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/1_20211220_211402_0000.png</image:loc>
 		</image:image>
@@ -13,10 +13,19 @@
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/03/5dfc8c5b8d6fd.png</image:loc>
 		</image:image>
 		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/05/microsoft-5.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/05/office-2.svg</image:loc>
+		</image:image>
+		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/01/healthifyme-1581940696370.jpg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/magzter-logo.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/07/linkedin-logo.png</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/07/7644688.png</image:loc>
