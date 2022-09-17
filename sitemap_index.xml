@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://pixello.co.in/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//localhost/pixelloweb/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
 		<loc>https://pixello.co.in/post-sitemap.xml</loc>
 	</sitemap>
 	<sitemap>
 		<loc>https://pixello.co.in/page-sitemap.xml</loc>
-		<lastmod>2022-09-15T16:02:48+00:00</lastmod>
+		<lastmod>2022-09-17T08:39:14+00:00</lastmod>
 	</sitemap>
 	<sitemap>
 		<loc>https://pixello.co.in/e-landing-page-sitemap.xml</loc>
