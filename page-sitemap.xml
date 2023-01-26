@@ -54,13 +54,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://pixello.co.in/tc/</loc>
-		<lastmod>2023-01-14T08:00:42+00:00</lastmod>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://pixello.co.in/pricing/pricing-1/</loc>
 		<lastmod>2023-01-26T07:36:43+00:00</lastmod>
 		<image:image>
@@ -132,6 +125,13 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/icons8-research-100.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://pixello.co.in/tc/</loc>
+		<lastmod>2023-01-26T11:03:34+00:00</lastmod>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
 	</url>
 </urlset>
