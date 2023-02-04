@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://pixello.co.in/</loc>
-		<lastmod>2023-01-29T16:10:14+00:00</lastmod>
+		<lastmod>2023-02-04T13:04:52+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
@@ -11,9 +11,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/10/sonyliv-logo-freelogovectors.net_-1-1-1.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/10/Voot_app_icon_2018.png</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/image-removebg-preview-1-1.png</image:loc>
@@ -54,8 +51,15 @@
 		</image:image>
 	</url>
 	<url>
+		<loc>https://pixello.co.in/tc/</loc>
+		<lastmod>2023-01-26T11:03:34+00:00</lastmod>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://pixello.co.in/pricing/pricing-1/</loc>
-		<lastmod>2023-01-26T07:36:43+00:00</lastmod>
+		<lastmod>2023-02-04T13:25:13+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
@@ -81,6 +85,9 @@
 			<image:loc>https://pixello.co.in/wp-content/uploads/2023/01/urban-company-logo.png</image:loc>
 		</image:image>
 		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/02/lenskart-logo.png</image:loc>
+		</image:image>
+		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/magzter-logo.png</image:loc>
 		</image:image>
 		<image:image>
@@ -104,7 +111,7 @@
 	</url>
 	<url>
 		<loc>https://pixello.co.in/pricing/pricing-2/</loc>
-		<lastmod>2023-01-26T07:40:54+00:00</lastmod>
+		<lastmod>2023-02-04T13:27:56+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
@@ -125,13 +132,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/icons8-research-100.png</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://pixello.co.in/tc/</loc>
-		<lastmod>2023-01-26T11:03:34+00:00</lastmod>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
 	</url>
 </urlset>
