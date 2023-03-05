@@ -3,6 +3,7 @@ form.search-form {
 
 	input {
 		position: relative;
+		padding-inline-end: calc(var(--search-button-size, var(--form-field-height, 40px)) + var(--search-input-additional-padding, 0px));
 
 		// hide chrome X button
 		&::-webkit-search-decoration,
@@ -62,8 +63,16 @@ form.search-form {
 }
 
 // customizer helper
-.search-form:not([data-live-results='thumbs']) {
-	.ct-image-container {
-		--display: none;
+.search-form {
+	&:not([data-live-results*='thumbs']) {
+		.ct-image-container {
+			display: none;
+		}
+	}
+
+	&:not([data-live-results*='product_price']) {
+		.price {
+			display: none;
+		}	
 	}
 }

@@ -1,17 +1,10 @@
-import { enable, disable } from './overlay/no-bounce'
-import focusLock from 'dom-focus-lock'
+import { scrollLockManager } from './overlay/no-bounce'
 import ctEvents from 'ct-events'
-
 import { mount as mountMobileMenu } from './overlay/mobile-menu'
 
-let focusLockToUse = focusLock
+import { focusLockManager } from '../helpers/focus-lock'
 
-if (window.ctFrontend && window.ctFrontend.focusLock) {
-	focusLockToUse = ctFrontend.focusLock
-} else {
-	window.ctFrontend = window.ctFrontend || {}
-	window.ctFrontend.focusLock = focusLockToUse
-}
+import { isTouchDevice } from '../helpers/is-touch-device'
 
 const showOffcanvas = (settings) => {
 	settings = {
@@ -101,15 +94,19 @@ const showOffcanvas = (settings) => {
 		settings.computeScrollContainer ||
 		settings.container.querySelector('.ct-panel-content')
 	) {
-		disable(
+		scrollLockManager().disable(
 			settings.computeScrollContainer
 				? settings.computeScrollContainer()
 				: settings.container.querySelector('.ct-panel-content')
 		)
 
 		setTimeout(() => {
-			focusLockToUse.on(
-				settings.container.querySelector('.ct-panel-content').parentNode
+			focusLockManager().focusLockOn(
+				settings.container.querySelector('.ct-panel-content')
+					.parentNode,
+				{
+					focusOnMount: !settings.focus,
+				}
 			)
 		})
 	}
@@ -140,6 +137,7 @@ const hideOffcanvas = (settings, args = {}) => {
 
 	args = {
 		closeInstant: false,
+		shouldFocusOriginalTrigger: true,
 		...args,
 	}
 
@@ -155,8 +153,20 @@ const hideOffcanvas = (settings, args = {}) => {
 		),
 
 		...document.querySelectorAll(`[href*="${settings.container.id}"]`),
-	].map((trigger) => {
+	].map((trigger, index) => {
 		trigger.setAttribute('aria-expanded', 'false')
+
+		if (args.shouldFocusOriginalTrigger && !isTouchDevice()) {
+			if (!trigger.focusDisabled) {
+				setTimeout(() => {
+					if (index === 0) {
+						trigger.focus()
+					}
+				}, 50)
+			}
+
+			trigger.focusDisabled = false
+		}
 	})
 
 	settings.container.classList.remove('active')
@@ -165,7 +175,7 @@ const hideOffcanvas = (settings, args = {}) => {
 		document.body.removeAttribute('data-panel')
 		ctEvents.trigger('ct:modal:closed', settings.container)
 
-		enable(
+		scrollLockManager().enable(
 			settings.computeScrollContainer
 				? settings.computeScrollContainer()
 				: settings.container.querySelector('.ct-panel-content')
@@ -180,7 +190,7 @@ const hideOffcanvas = (settings, args = {}) => {
 					document.body.removeAttribute('data-panel')
 					ctEvents.trigger('ct:modal:closed', settings.container)
 
-					enable(
+					scrollLockManager().enable(
 						settings.computeScrollContainer
 							? settings.computeScrollContainer()
 							: settings.container.querySelector(
@@ -188,7 +198,7 @@ const hideOffcanvas = (settings, args = {}) => {
 							  )
 					)
 
-					focusLockToUse.off(
+					focusLockManager().focusLockOff(
 						settings.container.querySelector('.ct-panel-content')
 							.parentNode
 					)
@@ -295,12 +305,52 @@ export const handleClick = (e, settings) => {
 			settings.container.hasListener = true
 
 			settings.container.addEventListener('click', (event) => {
-				if (event.target && event.target.matches('a')) {
-					hideOffcanvas(settings, {
-						closeInstant:
-							event.target.getAttribute('href')[0] !== '#',
-					})
+				if (!event.target) {
+					return
 				}
+
+				let maybeA = event.target
+
+				if (event.target.closest('a')) {
+					maybeA = event.target.closest('a')
+				}
+
+				if (!maybeA.closest('.ct-panel').classList.contains('active')) {
+					return
+				}
+
+				if (!maybeA.matches('a')) {
+					return
+				}
+
+				if (maybeA.classList.contains('ct-overlay-skip')) {
+					return
+				}
+
+				if (
+					!maybeA.closest('nav[data-id*="menu"]') &&
+					!maybeA.closest('[data-id*="text"]') &&
+					!maybeA.closest('[data-id*="button"]') &&
+					!maybeA.matches('.ct-offcanvas-trigger') &&
+					!maybeA.matches('.ct-header-account') &&
+					!maybeA.closest('.widget_nav_menu')
+				) {
+					return
+				}
+
+				hideOffcanvas(settings, {
+					closeInstant: maybeA.getAttribute('href')[0] !== '#',
+					shouldFocusOriginalTrigger: false,
+				})
+
+				setTimeout(() => {
+					if (
+						maybeA.matches('.ct-offcanvas-trigger') ||
+						maybeA.matches('.ct-header-account')
+					) {
+						maybeA.click()
+					}
+				}, 500)
 			})
 		}
 	}

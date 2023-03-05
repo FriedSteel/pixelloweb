@@ -38,7 +38,7 @@
 		svg {
 			margin: auto;
 			fill: #fff;
-			transform: translate3d(-10px, 0, 0);
+			transform: translateX(-10px);
 		}
 
 		&:hover {
@@ -48,7 +48,7 @@
 
 			svg {
 				opacity: 1;
-				transform: translate3d(0, 0, 0);
+				transform: translateX(0);
 			}
 		}
 	}
@@ -112,7 +112,12 @@
 		}
 	}
 
-	> section {
+	.author-box-name:is(p, div) {
+		margin-bottom: 20px;
+		color: var(--heading-color);
+	}
+
+	.author-box-bio {
 		color: var(--color);
 	}
 
@@ -126,14 +131,12 @@
 		text-transform: uppercase;
 		display: inline-flex;
 	}
-}
 
-.author-box-name {
-	// margin-bottom: 15px;
-}
 
-// .author-box-bio {
-// 	&:not(:last-child) {
-// 		margin-bottom: 15px;
-// 	}
-// }
+	// special case with related posts
+	+ .ct-related-posts {
+		border-top: none;
+		margin-top: 0;
+		padding-top: 0;
+	}
+}

@@ -45,28 +45,46 @@
 	}
 }
 
+// submit button
+.wpforms-submit {
+	--button-padding: 5px 35px;
+}
+
 // inline form
-div.wpforms-container.inline-fields {
-	overflow: visible;
+div.ct-wpforms-inline-fields {
+	
+	form,
+	.wpforms-field-container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--wpforms-inline-fields-gap, 20px);
+
+		@include media-breakpoint-down(sm) {
+			flex-direction: column;
+		}
+	}
+
+	.wpforms-field-container {
+		flex: 1;
+
+		.wpforms-field {
+			flex: 1;
+			padding: 0;
+		}
+	}
+
+	.wpforms-submit-container {
+		padding: 0;
+	}
 
 	@include media-breakpoint-down(sm) {
-		form {
-			display: flex;
-			flex-direction: column;
+		input,
+		select option {
 			text-align: center;
-
-			.wpforms-field-container,
-			.wpforms-submit-container {
-				width: 100%;
-			}
-
-			.wpforms-field {
-				padding-right: 0;
-
-				input {
-					text-align: center;
-				}
-			}
 		}
+
+		.wpforms-submit {
+			width: 100%;
+		}	
 	}
 }

@@ -1,4 +1,5 @@
-.cart_totals {
+// .cart_totals
+.ct-cart-form .cart_totals {
 	align-self: flex-start;
 	position: sticky;
 	top: calc(
@@ -22,20 +23,17 @@
 	table {
 		--listItemSpacing: 1em;
 
-		tr:first-child {
+		// tr:first-child,
+		tr:last-child {
 			--table-border-width: 0;
 		}
-
-		// th {
-		// 	vertical-align: top;
-		// }
 
 		td {
 			text-align: right;
 
-			&:before {
-				display: none;
-			}
+			// &:before {
+			// 	display: none;
+			// }
 		}
 	}
 

@@ -6,9 +6,11 @@
 .ct-related-posts {
 	
 	.ct-block-title {
-		grid-column: 1/-1;
-		margin-bottom: -10px;
 		text-align: var(--horizontal-alignment);
+
+		&:is(p, span) {
+			color: var(--heading-color);
+		}
 	}
 
 	.ct-image-container {
@@ -19,7 +21,17 @@
 		--fontSize: 16px;
 		margin: 15px 0 0 0;
 		word-break: break-word;
-		--linkInitialColor: var(--heading-color, var(--heading-3-color, var(--headings-color)));
+		// --linkInitialColor: var(--heading-color, var(--heading-3-color, var(--headings-color)));
+
+		a {
+			&:not(:hover) {
+				color: inherit;
+			}
+		}
+
+		&:is(p, span) {
+			color: var(--heading-color);
+		}
 	}
 
 	.entry-meta {

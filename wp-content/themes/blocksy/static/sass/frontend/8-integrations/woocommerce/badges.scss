@@ -8,23 +8,29 @@
 	top: var(--badge-top, 15px);
 	left: var(--badge-left, 15px);
 	height: var(--badge-height, 28px);
-	border-radius: var(--badge-radius, 3px);
+	border-radius: var(--badge-radius, 0px);
 	padding: var(--badge-padding, 0 10px) !important;
 	font-size: var(--badge-font-size, 13px);
 	font-weight: 600;
 	line-height: 0;
-	// text-transform: uppercase;
 	margin: 0 !important;
 	color: var(--badge-text-color, #fff);
 	background-color: var(--badge-background-color, var(--paletteColor1));
+
+	&[data-shape="type-2"] {
+		--badge-radius: 3px;
+	}
 }
 
-.onsale[data-shape="circle"] {
+.onsale[data-shape="type-3"] {
 	--badge-font-size: 11px;
-	--badge-height: 45px;
-	--badge-padding: 3px;
 	--badge-radius: 200px;
-	min-width: 45px;
+	--badge-height: auto;
+	aspect-ratio: 1/1;
+}
+
+.out-of-stock-badge[data-shape="type-3"] {
+	--badge-radius: 3px;
 }
 
 

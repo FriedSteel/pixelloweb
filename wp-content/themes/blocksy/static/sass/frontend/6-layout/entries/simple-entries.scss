@@ -1,4 +1,4 @@
-[data-layout="simple"] {
+[data-archive="default"][data-layout="simple"] {
 	article {
 		&:not(:last-child) {
 			margin-bottom: var(--grid-columns-gap, 30px);
@@ -9,6 +9,9 @@
 		}
 
 		.card-content {
+			display: flex;
+			flex-direction: column;
+			
 			@include media-breakpoint-up (md) {
 				align-self: center;
 			}

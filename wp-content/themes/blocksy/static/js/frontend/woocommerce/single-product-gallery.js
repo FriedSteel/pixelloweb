@@ -328,7 +328,9 @@ export const mount = (el, { event: mountEvent }) => {
 	if (mountEvent) {
 		if (isTouchDevice() && mountEvent.type === 'click') {
 			setTimeout(() => {
-				mountEvent.target.click()
+				if (mountEvent.target && mountEvent.target.click) {
+					mountEvent.target.click()
+				}
 			})
 		}
 	}

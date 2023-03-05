@@ -56,9 +56,14 @@ const handleItemChangeFor = (args = {}) => {
 
 	const itemDescriptors = variableDescriptors[getOriginalId(itemId)]
 
-	const descriptor = (isFunction(itemDescriptors)
-		? itemDescriptors({ itemId: shortenItemId(itemId), fullItemId: itemId })
-		: itemDescriptors)[optionId]
+	const descriptor = (
+		isFunction(itemDescriptors)
+			? itemDescriptors({
+					itemId: shortenItemId(itemId),
+					fullItemId: itemId,
+			  })
+			: itemDescriptors
+	)[optionId]
 
 	if (!descriptor) {
 		return
@@ -100,10 +105,7 @@ const makeShortcutFor = (item) => {
 	shortcut.classList.add('ct-customizer-shortcut')
 
 	if (item.dataset.shortcut === 'drop') {
-		shortcut.innerHTML = `
-    <svg viewBox="0 0 24 24"><path d="M3,12c0,1.1,0.9,2,2,2s2-0.9,2-2s-0.9-2-2-2S3,10.9,3,12z M10,12c0,1.1,0.9,2,2,2s2-0.9,2-2s-0.9-2-2-2S10,10.9,10,12z
-   M17,12c0,1.1,0.9,2,2,2s2-0.9,2-2s-0.9-2-2-2S17,10.9,17,12z"/></svg>
-        `
+		shortcut.innerHTML = `<svg viewBox="0 0 24 24"><path d="M3,12c0,1.1,0.9,2,2,2s2-0.9,2-2s-0.9-2-2-2S3,10.9,3,12z M10,12c0,1.1,0.9,2,2,2s2-0.9,2-2s-0.9-2-2-2S10,10.9,10,12zM17,12c0,1.1,0.9,2,2,2s2-0.9,2-2s-0.9-2-2-2S17,10.9,17,12z"/></svg>`
 	} else {
 		let text = __('Edit', 'blocksy')
 
@@ -199,6 +201,10 @@ wp.customize.bind('preview-ready', () => {
 	wp.customize.selectiveRefresh.bind(
 		'partial-content-rendered',
 		(placement) => {
+			setTimeout(() => {
+				makeAllShortcuts()
+			}, 500)
+
 			if (!placement.container) {
 				return
 			}
@@ -214,51 +220,48 @@ wp.customize.bind('preview-ready', () => {
 			}
 
 			if (placement.container.is('footer.ct-footer')) {
-				document.body.dataset.footer = placement.container.attr(
-					'data-id'
-				)
+				document.body.dataset.footer =
+					placement.container.attr('data-id')
 			}
 		}
 	)
 
-	wp.customize.selectiveRefresh.Partial.prototype.preparePlacement = function (
-		placement
-	) {
-		if (this.params.loader_selector) {
-			if (this.params.loader_selector.indexOf(':') > -1) {
-				let [
-					loader_selector,
-					index,
-				] = this.params.loader_selector.split(':')
+	wp.customize.selectiveRefresh.Partial.prototype.preparePlacement =
+		function (placement) {
+			if (this.params.loader_selector) {
+				if (this.params.loader_selector.indexOf(':') > -1) {
+					let [loader_selector, index] =
+						this.params.loader_selector.split(':')
 
-				$(placement.container)
-					.find(loader_selector)
-					.toArray()
-					.filter(
-						(el) =>
-							$(el.parentNode)
-								.find(loader_selector)
-								.toArray()
-								.indexOf(el) +
-								1 ===
-							parseInt(index, 10)
-					)
-					.map((el) =>
-						el.classList.add('customize-partial-refreshing')
-					)
+					$(placement.container)
+						.find(loader_selector)
+						.toArray()
+						.filter(
+							(el) =>
+								$(el.parentNode)
+									.find(loader_selector)
+									.toArray()
+									.indexOf(el) +
+									1 ===
+								parseInt(index, 10)
+						)
+						.map((el) =>
+							el.classList.add('customize-partial-refreshing')
+						)
+				} else {
+					$(placement.container)
+						.find(this.params.loader_selector)
+						.addClass('customize-partial-refreshing')
+				}
+
+				return
 			} else {
-				$(placement.container)
-					.find(this.params.loader_selector)
-					.addClass('customize-partial-refreshing')
+				$(placement.container).addClass('customize-partial-refreshing')
 			}
-
-			return
-		} else {
-			$(placement.container).addClass('customize-partial-refreshing')
 		}
-	}
 
-	wp.customize.selectiveRefresh.Partial.prototype.createEditShortcutForPlacement = () => {}
+	wp.customize.selectiveRefresh.Partial.prototype.createEditShortcutForPlacement =
+		() => {}
 	wp.customize.selectiveRefresh.Partial.prototype.ready = function () {
 		var partial = this
 
@@ -280,73 +283,69 @@ wp.customize.bind('preview-ready', () => {
 		})
 	}
 
-	wp.customize.selectiveRefresh.Partial.prototype.isRelatedSetting = function (
-		setting,
-		newValue,
-		oldValue
-	) {
-		var partial = this
+	wp.customize.selectiveRefresh.Partial.prototype.isRelatedSetting =
+		function (setting, newValue, oldValue) {
+			var partial = this
 
-		if (_.isString(setting)) {
-			setting = wp.customize(setting)
-		}
+			if (_.isString(setting)) {
+				setting = wp.customize(setting)
+			}
 
-		if (!setting) {
-			return false
-		}
+			if (!setting) {
+				return false
+			}
 
-		if (
-			_.indexOf(partial.settings(), setting.id) > -1 &&
-			(partial.settings().indexOf('header_placements') > -1 ||
-				partial.settings().indexOf('footer_placements') > -1)
-		) {
-			if (partial.id.indexOf(':') > -1) {
-				const [_, itemId] = partial.id.split(':')
+			if (
+				_.indexOf(partial.settings(), setting.id) > -1 &&
+				(partial.settings().indexOf('header_placements') > -1 ||
+					partial.settings().indexOf('footer_placements') > -1)
+			) {
+				if (partial.id.indexOf(':') > -1) {
+					const [_, itemId] = partial.id.split(':')
 
-				const item = ct_customizer_localizations.header_builder_data[
-					partial.settings().indexOf('header_placements') > -1
-						? 'header'
-						: 'footer'
-				].find(({ id }) => id === itemId)
+					const item =
+						ct_customizer_localizations.header_builder_data[
+							partial.settings().indexOf('header_placements') > -1
+								? 'header'
+								: 'footer'
+						].find(({ id }) => id === itemId)
 
-				if (!item) {
+					if (!item) {
+						return false
+					}
+
+					if (newValue.__should_refresh_item__) {
+						const [expectedItemId, optionId] =
+							newValue.__should_refresh_item__.split(':')
+
+						if (
+							expectedItemId.indexOf(itemId) === 0 &&
+							item.config.selective_refresh.indexOf(optionId) > -1
+						) {
+							if (partial.params.loader_selector) {
+								partial.params.loader_selector = `[data-id="${shortenItemId(
+									expectedItemId
+								)}"]`
+							}
+							return true
+						}
+					}
+
 					return false
 				}
 
-				if (newValue.__should_refresh_item__) {
-					const [
-						expectedItemId,
-						optionId,
-					] = newValue.__should_refresh_item__.split(':')
-
-					if (
-						expectedItemId.indexOf(itemId) > -1 &&
-						item.config.selective_refresh.indexOf(optionId) > -1
-					) {
-						if (partial.params.loader_selector) {
-							partial.params.loader_selector = `[data-id="${shortenItemId(
-								expectedItemId
-							)}"]`
-						}
-						return true
-					}
+				if (
+					Object.keys(newValue).indexOf('__should_refresh__') > -1 &&
+					newValue.__should_refresh__
+				) {
+					return true
 				}
 
 				return false
 			}
 
-			if (
-				Object.keys(newValue).indexOf('__should_refresh__') > -1 &&
-				newValue.__should_refresh__
-			) {
-				return true
-			}
-
-			return false
+			return -1 !== _.indexOf(partial.params.settings, setting.id)
 		}
-
-		return -1 !== _.indexOf(partial.params.settings, setting.id)
-	}
 
 	wp.customize.preview.bind(
 		'ct:header:receive-value-update',
@@ -467,6 +466,10 @@ wp.customize.bind('preview-ready', () => {
 				if (partial.params.loader_selector === 'skip') {
 					skipNextRefresh = true
 					setTimeout(() => (skipNextRefresh = false), 300)
+					return
+				}
+
+				if (!document.querySelector(partial.params.selector)) {
 					return
 				}
 

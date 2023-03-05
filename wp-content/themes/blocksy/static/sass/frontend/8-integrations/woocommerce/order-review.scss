@@ -4,8 +4,9 @@
 	}
 }
 
-ul.order_details {
+ul.woocommerce-order-overview.order_details {
 	position: relative;
+	margin-bottom: 0.5em;
 	border: 1px solid var(--border-color);
 
 	@include media-breakpoint-up (md) {
@@ -41,11 +42,16 @@ ul.order_details {
 	}
 }
 
-
+.woocommerce-order-details,
 .woocommerce-customer-details {
 	margin-top: 2.5em;
+}
 
-	h2 {
+
+.woocommerce-customer-details {
+	// margin-top: 2.5em;
+
+	.woocommerce-column__title {
 		--fontSize: 15px;
 		margin-bottom: 0;
 		padding: 20px;

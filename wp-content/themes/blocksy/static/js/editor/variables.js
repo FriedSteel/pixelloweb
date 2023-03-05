@@ -41,16 +41,55 @@ export const gutenbergVariables = {
 			'boxed_content_spacing',
 			'content_boxed_radius',
 
-			...(isContentBlock ? ['has_content_block_structure'] : []),
+			...(isContentBlock
+				? [
+						'has_content_block_structure',
+						'template_subtype',
+						'template_editor_width_source',
+						'template_editor_width',
+				  ]
+				: []),
 		],
 		[
+			{
+				selector: `.editor-styles-wrapper`,
+				variable: 'block-max-width',
+				extractValue: ({
+					template_subtype,
+					template_editor_width_source = 'small',
+					template_editor_width = 1290,
+				}) => {
+					if (!template_subtype) {
+						return 'CT_CSS_SKIP_RULE'
+					}
+
+					if (template_subtype !== 'card') {
+						return 'CT_CSS_SKIP_RULE'
+					}
+
+					if (template_editor_width_source === 'small') {
+						return 500
+					}
+
+					if (template_editor_width_source === 'medium') {
+						return 900
+					}
+
+					return template_editor_width
+				},
+				fullValue: true,
+				unit: 'px',
+				important: true,
+			},
+
 			{
 				selector: `.editor-styles-wrapper`,
 				variable: 'has-boxed',
 				responsive: true,
 				extractValue: ({
+					template_subtype,
 					content_style_source = 'inherit',
-					has_content_block_structure,
+					has_content_block_structure = 'yes',
 					content_style = 'wide',
 				}) => {
 					if (!isContentBlock && content_style_source === 'inherit') {
@@ -58,13 +97,14 @@ export const gutenbergVariables = {
 							ct_editor_localizations.default_content_style
 					}
 
-					content_style = maybePromoteScalarValueIntoResponsive(
-						content_style
-					)
+					content_style =
+						maybePromoteScalarValueIntoResponsive(content_style)
 
 					if (
 						isContentBlock &&
-						has_content_block_structure !== 'yes'
+						(has_content_block_structure !== 'yes' ||
+							template_subtype === 'card' ||
+							template_subtype === 'content')
 					) {
 						content_style = {
 							desktop: 'wide',
@@ -99,7 +139,8 @@ export const gutenbergVariables = {
 				variable: 'has-wide',
 				responsive: true,
 				extractValue: ({
-					has_content_block_structure,
+					template_subtype,
+					has_content_block_structure = 'yes',
 					content_style_source = 'inherit',
 					content_style = 'wide',
 				}) => {
@@ -108,13 +149,14 @@ export const gutenbergVariables = {
 							ct_editor_localizations.default_content_style
 					}
 
-					content_style = maybePromoteScalarValueIntoResponsive(
-						content_style
-					)
+					content_style =
+						maybePromoteScalarValueIntoResponsive(content_style)
 
 					if (
 						isContentBlock &&
-						has_content_block_structure !== 'yes'
+						(has_content_block_structure !== 'yes' ||
+							template_subtype === 'card' ||
+							template_subtype === 'content')
 					) {
 						content_style = {
 							desktop: 'wide',
@@ -153,7 +195,8 @@ export const gutenbergVariables = {
 					fullValue: true,
 				},
 				valueExtractor: ({
-					has_content_block_structure,
+					template_subtype,
+					has_content_block_structure = 'yes',
 					content_style_source = 'inherit',
 					content_background,
 				}) => {
@@ -164,7 +207,9 @@ export const gutenbergVariables = {
 
 					if (
 						isContentBlock &&
-						has_content_block_structure !== 'yes'
+						(has_content_block_structure !== 'yes' ||
+							template_subtype === 'card' ||
+							template_subtype === 'content')
 					) {
 						content_background = JSON.parse(
 							JSON.stringify(
@@ -199,9 +244,10 @@ export const gutenbergVariables = {
 				unit: '',
 				fullValue: true,
 				extractValue: ({
+					template_subtype,
 					content_style_source = 'inherit',
 					boxed_content_spacing,
-					has_content_block_structure,
+					has_content_block_structure = 'yes',
 				}) => {
 					if (!isContentBlock && content_style_source === 'inherit') {
 						boxed_content_spacing =
@@ -210,7 +256,9 @@ export const gutenbergVariables = {
 
 					if (
 						isContentBlock &&
-						has_content_block_structure !== 'yes'
+						(has_content_block_structure !== 'yes' ||
+							template_subtype === 'card' ||
+							template_subtype === 'content')
 					) {
 						return 'CT_CSS_SKIP_RULE'
 					}
@@ -227,9 +275,10 @@ export const gutenbergVariables = {
 
 				fullValue: true,
 				extractValue: ({
+					template_subtype,
 					content_style_source = 'inherit',
 					content_boxed_radius,
-					has_content_block_structure,
+					has_content_block_structure = 'yes',
 				}) => {
 					if (!isContentBlock && content_style_source === 'inherit') {
 						content_boxed_radius =
@@ -238,7 +287,9 @@ export const gutenbergVariables = {
 
 					if (
 						isContentBlock &&
-						has_content_block_structure !== 'yes'
+						(has_content_block_structure !== 'yes' ||
+							template_subtype === 'card' ||
+							template_subtype === 'content')
 					) {
 						return 'CT_CSS_SKIP_RULE'
 					}
@@ -254,9 +305,10 @@ export const gutenbergVariables = {
 				responsive: true,
 				fullValue: true,
 				extractValue: ({
+					template_subtype,
 					content_style_source = 'inherit',
 					content_boxed_shadow,
-					has_content_block_structure,
+					has_content_block_structure = 'yes',
 				}) => {
 					if (!isContentBlock && content_style_source === 'inherit') {
 						content_boxed_shadow =
@@ -265,7 +317,9 @@ export const gutenbergVariables = {
 
 					if (
 						isContentBlock &&
-						has_content_block_structure !== 'yes'
+						(has_content_block_structure !== 'yes' ||
+							template_subtype === 'card' ||
+							template_subtype === 'content')
 					) {
 						return 'CT_CSS_SKIP_RULE'
 					}

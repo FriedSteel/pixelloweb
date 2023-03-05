@@ -4,7 +4,8 @@ table.shop_table {
 	--table-font-size: 15px;
 
 	tr {
-		--table-border-width: 1px 0 0 0;
+		// --table-border-width: 1px 0 0 0;
+		--table-border-width: 0 0 1px 0;
 		--table-border-style: dashed;
 
 		> * {
@@ -22,19 +23,33 @@ table.shop_table {
 		vertical-align: top;
 	}
 
-	thead th {
-		--table-border-width: 0 0 2px 0;
-		--table-border-style: solid;
-		color: var(--headings-color);
+	thead {
+		th {
+			--table-border-width: 0 0 2px 0;
+			--table-border-style: solid;
+			color: var(--headings-color);
+		}
 	}
 
-	tfoot td {
-		font-weight: 600;
+	tfoot {
+		tr:last-child {
+			--table-border-width: 0;
+		}
+
+		td {
+			font-weight: 600;
+		}
 	}
 
 	a {
 		font-weight: 500;
 		--linkInitialColor: var(--color);
+	}
+
+	ul, ol {
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -148,7 +163,7 @@ table.shop_table {
 	
 
 	// product remove button
-	[class*="product-remove"] {
+	tr > [class*="product-remove"] {
 		width: 20px;
 		text-align: end;
 	}

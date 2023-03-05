@@ -12,7 +12,9 @@ wp.customize('account_page_avatar_size', (val) =>
 
 wp.customize('sale_badge_shape', (val) =>
 	val.bind((to) => {
-		Array.from(document.querySelectorAll('.onsale')).map((el) => {
+		Array.from(
+			document.querySelectorAll('.onsale,.out-of-stock-badge')
+		).map((el) => {
 			el.dataset.shape = to
 		})
 	})

@@ -3,6 +3,12 @@ import { typographyOption } from './typography'
 import { handleBackgroundOptionFor } from './background'
 
 export const getWooVariablesFor = () => ({
+	...handleBackgroundOptionFor({
+		id: 'shop_archive_background',
+		selector: '[data-prefix="woo_categories"]',
+		responsive: true,
+	}),
+
 	// Woocommerce archive
 	shop_cards_alignment_1: [
 		{
@@ -91,6 +97,13 @@ export const getWooVariablesFor = () => ({
 			responsive: true,
 		},
 	],
+
+	cardProductExcerptColor: {
+		selector: '[data-products] .entry-excerpt',
+		variable: 'color',
+		type: 'color',
+		responsive: true,
+	},
 
 	cardProductPriceColor: {
 		selector: '[data-products] .price',
@@ -426,32 +439,150 @@ export const getWooVariablesFor = () => ({
 		type: 'color',
 	},
 
-	// messages
-	infoMessageColor: [
+	// success message
+	success_message_text_color: [
 		{
-			selector: '.woocommerce-info, .woocommerce-message',
+			selector: '.woocommerce-message',
 			variable: 'color',
-			type: 'color:text',
+			type: 'color:default',
 		},
 
 		{
-			selector: '.woocommerce-info, .woocommerce-message',
-			variable: 'background-color',
-			type: 'color:background',
+			selector: '.woocommerce-message',
+			variable: 'linkHoverColor',
+			type: 'color:hover',
 		},
 	],
 
-	errorMessageColor: [
+	success_message_background_color: {
+		selector: '.woocommerce-message',
+		variable: 'background-color',
+		type: 'color',
+	},
+
+	success_message_button_text_color: [
+		{
+			selector: '.woocommerce-message',
+			variable: 'buttonTextInitialColor',
+			type: 'color:default',
+		},
+
+		{
+			selector: '.woocommerce-message',
+			variable: 'buttonTextHoverColor',
+			type: 'color:hover',
+		},
+	],
+
+	success_message_button_background: [
+		{
+			selector: '.woocommerce-message',
+			variable: 'buttonInitialColor',
+			type: 'color:default',
+		},
+
+		{
+			selector: '.woocommerce-message',
+			variable: 'buttonHoverColor',
+			type: 'color:hover',
+		},
+	],
+
+	// info message
+	info_message_text_color: [
+		{
+			selector: '.woocommerce-info, .woocommerce-thankyou-order-received',
+			variable: 'color',
+			type: 'color:default',
+		},
+
+		{
+			selector: '.woocommerce-info, .woocommerce-thankyou-order-received',
+			variable: 'linkHoverColor',
+			type: 'color:hover',
+		},
+	],
+
+	info_message_background_color: {
+		selector: '.woocommerce-info, .woocommerce-thankyou-order-received',
+		variable: 'background-color',
+		type: 'color',
+	},
+
+	info_message_button_text_color: [
+		{
+			selector: '.woocommerce-info',
+			variable: 'buttonTextInitialColor',
+			type: 'color:default',
+		},
+
+		{
+			selector: '.woocommerce-info',
+			variable: 'buttonTextHoverColor',
+			type: 'color:hover',
+		},
+	],
+
+	info_message_button_background: [
+		{
+			selector: '.woocommerce-info',
+			variable: 'buttonInitialColor',
+			type: 'color:default',
+		},
+
+		{
+			selector: '.woocommerce-info',
+			variable: 'buttonHoverColor',
+			type: 'color:hover',
+		},
+	],
+
+	// error message
+	error_message_text_color: [
 		{
 			selector: '.woocommerce-error',
 			variable: 'color',
-			type: 'color:text',
+			type: 'color:default',
 		},
 
 		{
 			selector: '.woocommerce-error',
-			variable: 'background-color',
-			type: 'color:background',
+			variable: 'linkHoverColor',
+			type: 'color:hover',
+		},
+	],
+
+	error_message_background_color: {
+		selector: '.woocommerce-error',
+		variable: 'background-color',
+		type: 'color',
+	},
+
+	error_message_button_text_color: [
+		{
+			selector: '.woocommerce-error',
+			variable: 'buttonTextInitialColor',
+			type: 'color:default',
+		},
+
+		{
+			selector: '.woocommerce-error',
+			variable: 'buttonTextHoverColor',
+			type: 'color:hover',
+		},
+	],
+
+	error_message_button_background: [
+		{
+			selector: '.woocommerce-error',
+			variable: 'buttonInitialColor',
+			type: 'color:default',
+		},
+
+		{
+			selector: '.woocommerce-error',
+			variable: 'buttonHoverColor',
+			type: 'color:hover',
 		},
 	],
 

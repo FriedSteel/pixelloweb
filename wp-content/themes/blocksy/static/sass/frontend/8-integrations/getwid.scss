@@ -9,7 +9,7 @@
 
 			> .wp-block-getwid-section__inner-wrapper {
 				width: var(--block-width);
-				max-width: var(--block-max-width, var(--container-max-width));
+				max-width: var(--block-max-width, var(--normal-container-max-width));
 			}
 		}
 	}

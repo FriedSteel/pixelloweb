@@ -72,13 +72,10 @@ const Select = ({
 		}, 50)
 	}, [])
 
-	if (orderedChoices.length === 0) {
-		return null
-	}
-
 	let maybeSelectedItem = orderedChoices.find(
 		({ key }) => key === potentialValue
 	)
+
 	if (!maybeSelectedItem) {
 		maybeSelectedItem = orderedChoices.find(
 			({ key }) => parseInt(key) === parseInt(potentialValue)
@@ -87,6 +84,7 @@ const Select = ({
 
 	return (
 		<Downshift
+			key={maybeSelectedItem?.key || 'downshift'}
 			onInputValueChange={(value) => {
 				onInputValueChange(value)
 			}}
@@ -272,10 +270,11 @@ const Select = ({
 							})}
 							placeholder={
 								search && isOpen
-									? searchPlaceholder || __('Type to search...', 'blocksy')
-									: placeholder || __('Select value...', 'blocksy')
+									? searchPlaceholder ||
+									  __('Type to search...', 'blocksy')
+									: placeholder ||
+									  __('Select value...', 'blocksy')
 							}
-							disabled={orderedChoices.length === 0}
 							readOnly={search ? !isOpen : true}
 						/>
 

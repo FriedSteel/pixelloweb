@@ -26,6 +26,10 @@
 
 	.star-rating {
 		margin-top: 5px;
+
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
 	}
 
 	.price {

@@ -148,4 +148,11 @@ export const getPaginationVariables = () => ({
 			type: 'color:hover',
 		},
 	],
+
+	[`${prefix}_pagination_border_radius`]: {
+		selector: applyPrefixFor('.ct-pagination', prefix),
+		type: 'spacing',
+		variable: 'border-radius',
+		// responsive: true,
+	},
 })

@@ -1,6 +1,5 @@
 import $ from 'jquery'
 import { Flexy, adjustContainerHeightFor } from 'flexy'
-import { markImagesAsLoaded } from './lazy-load-helpers'
 import ctEvents from 'ct-events'
 import { getCurrentScreen } from '../frontend/helpers/current-screen'
 
@@ -10,9 +9,6 @@ export const mount = (sliderEl, args) => {
 	if (sliderEl.flexy) {
 		return
 	}
-
-	markImagesAsLoaded(sliderEl.querySelector('.flexy-items'))
-	markImagesAsLoaded(sliderEl.querySelector('.flexy-pills'))
 
 	let maybePillsSlider = sliderEl.querySelector('.flexy-pills [data-flexy]')
 
@@ -41,6 +37,10 @@ export const mount = (sliderEl, args) => {
 		scaleRotateEffect: false,
 
 		onDragStart: (e) => {
+			if (!e.target.closest('.flexy-items')) {
+				return
+			}
+
 			Array.from(
 				e.target.closest('.flexy-items').querySelectorAll('.zoomImg')
 			).map((img) => {

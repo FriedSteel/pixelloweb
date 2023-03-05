@@ -4,6 +4,7 @@ import {
 	getPrefixFor,
 } from '../../helpers'
 import { handleBackgroundOptionFor } from '../../variables/background'
+import { typographyOption } from '../../variables/typography'
 import { getSingleShareBoxVariables } from './share-box'
 
 import { maybePromoteScalarValueIntoResponsive } from 'customizer-sync-helpers/dist/promote-into-responsive'
@@ -21,6 +22,11 @@ export const getSingleElementsVariables = () => ({
 		unit: '',
 	},
 
+	...typographyOption({
+		id: `${prefix}_single_author_box_name_font`,
+		selector: applyPrefixFor('.author-box .author-box-name', prefix),
+	}),
+
 	[`${prefix}_single_author_box_name_color`]: {
 		selector: applyPrefixFor('.author-box .author-box-name', prefix),
 		variable: 'heading-color',
@@ -28,23 +34,28 @@ export const getSingleElementsVariables = () => ({
 		responsive: true,
 	},
 
+	...typographyOption({
+		id: `${prefix}_single_author_box_font`,
+		selector: applyPrefixFor('.author-box .author-box-bio', prefix),
+	}),
+
 	[`${prefix}_single_author_box_font_color`]: [
 		{
-			selector: applyPrefixFor('.author-box section', prefix),
+			selector: applyPrefixFor('.author-box .author-box-bio', prefix),
 			variable: 'color',
 			type: 'color:default',
 			responsive: true,
 		},
 
 		{
-			selector: applyPrefixFor('.author-box section', prefix),
+			selector: applyPrefixFor('.author-box .author-box-bio', prefix),
 			variable: 'linkInitialColor',
 			type: 'color:initial',
 			responsive: true,
 		},
 
 		{
-			selector: applyPrefixFor('.author-box section', prefix),
+			selector: applyPrefixFor('.author-box .author-box-bio', prefix),
 			variable: 'linkHoverColor',
 			type: 'color:hover',
 			responsive: true,
@@ -234,5 +245,12 @@ export const getSingleElementsVariables = () => ({
 		variable: 'image-overlay-color',
 
 		type: 'color:hover',
+	},
+
+	[`${prefix}_posts_nav_image_border_radius`]: {
+		selector: applyPrefixFor('.post-navigation figure', prefix),
+		type: 'spacing',
+		variable: 'border-radius',
+		// responsive: true,
 	},
 })

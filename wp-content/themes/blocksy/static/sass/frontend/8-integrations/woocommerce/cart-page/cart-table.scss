@@ -8,6 +8,12 @@ table.cart {
 		--table-padding: 1.5em 0.7em;
 	}
 
+	tbody {
+		tr:last-child {
+			--table-border-width: 0;
+		}
+	}
+
 
 	// product name
 	.product-name {
@@ -24,16 +30,14 @@ table.cart {
 
 	// misc
 	@include media-breakpoint-down (md) {
-		.product-price,
-		.product-quantity,
-		.product-subtotal,
-		.product-remove {
-			display: none;
+		tr > {
+			.product-price,
+			.product-quantity,
+			.product-subtotal,
+			.product-remove {
+				display: none;
+			}
 		}
-	}
-
-	dl.variation {
-		text-align: left;
 	}
 }
 

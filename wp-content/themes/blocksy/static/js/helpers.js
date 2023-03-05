@@ -1,9 +1,5 @@
 import ctEvents from 'ct-events'
-
-const isTouchDevice = () =>
-	'ontouchstart' in window ||
-	navigator.maxTouchPoints > 0 ||
-	navigator.msMaxTouchPoints > 0
+import { isTouchDevice } from './frontend/helpers/is-touch-device'
 
 const loadSingleEntryPoint = ({
 	els,
@@ -131,6 +127,18 @@ const loadSingleEntryPoint = ({
 					return
 				}
 
+				if (el.dataset.autoplay && parseFloat(el.dataset.autoplay)) {
+					setTimeout(() => {
+						load().then((arg) =>
+							mount({
+								...arg,
+								el,
+							})
+						)
+					}, parseFloat(el.dataset.autoplay) * 1000)
+					return
+				}
+
 				el.hasLazyLoadMouseOverListener = true
 
 				el.forcedMount = (data = {}) =>
@@ -150,7 +158,7 @@ const loadSingleEntryPoint = ({
 									})
 								)
 							},
-							{ once: true }
+							{ once: true, passive: true }
 						)
 					}
 				)

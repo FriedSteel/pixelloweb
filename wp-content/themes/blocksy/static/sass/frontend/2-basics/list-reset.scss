@@ -13,8 +13,10 @@
 .shop_table,
 .wc-item-meta,
 .order_details,
+.woocommerce-pagination .page-numbers,
 .woocommerce-mini-cart,
-.woocommerce-MyAccount-navigation ul {
+.woocommerce-MyAccount-navigation ul,
+.wp-block-latest-comments {
 	margin-bottom: 0;
 	
 	--listIndent: 0;

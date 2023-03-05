@@ -10,7 +10,18 @@ InfiniteScroll.imagesLoaded = (fragment, fn) => fn()
 InfiniteScroll.Button.prototype.hide = () => {}
 
 export const mount = (paginationContainer) => {
-	let layoutEl = paginationContainer.previousElementSibling
+	let layoutEl = [...paginationContainer.parentNode.children]
+		.reduce(
+			(a, c) => {
+				return [...a, ...c.children]
+			},
+			[...paginationContainer.parentNode.children]
+		)
+		.find(
+			(c) =>
+				c.classList.contains('products') ||
+				c.classList.contains('entries')
+		)
 
 	if (!paginationContainer) return
 
@@ -27,8 +38,8 @@ export const mount = (paginationContainer) => {
 
 	let inf = new InfiniteScroll(layoutEl, {
 		// debug: true,
-		checkLastPage: '.next',
-		path: '.next',
+		checkLastPage: '.ct-pagination .next',
+		path: '.ct-pagination .next',
 		append: getAppendSelectorFor(layoutEl),
 		button:
 			paginationType === 'load_more'
@@ -46,7 +57,6 @@ export const mount = (paginationContainer) => {
 					.classList.remove('ct-loading')
 
 				setTimeout(() => {
-					ctEvents.trigger('ct:images:lazyload:update')
 					ctEvents.trigger('ct:infinite-scroll:load')
 					ctEvents.trigger('blocksy:frontend:init')
 					ctEvents.trigger('blocksy:parallax:init')
@@ -58,7 +68,14 @@ export const mount = (paginationContainer) => {
 				}, 100)
 			})
 
-			this.on('append', () => watchLayoutContainerForReveal(layoutEl))
+			this.on('append', () => {
+				watchLayoutContainerForReveal(layoutEl)
+				;[...layoutEl.querySelectorAll('[srcset]')].forEach((el) => {
+					const prev = el.srcset
+					el.srcset = ''
+					el.srcset = prev
+				})
+			})
 
 			this.on('request', () => {
 				paginationContainer
@@ -92,19 +109,11 @@ function getAppendSelectorFor(layoutEl) {
 			: `.ct-posts-shortcode:nth-child(${layoutIndex + 1}) .entries > *`
 	}
 
-	return layoutEl.classList.contains('products')
-		? `#main .products > li`
-		: `.entries > *`
+	if (layoutEl.classList.contains('products')) {
+		let layoutIndex = [...layoutEl.parentNode.children].indexOf(layoutEl)
 
-	let maybeClosestShortcode = layoutEl.closest('[data-ct="latest-posts"]')
-
-	let prefix = ''
-
-	if (maybeClosestShortcode) {
-		prefix = `.${maybeClosestShortcode.classList[0]} `
+		return `#main .products:nth-child(${layoutIndex + 1}) > li`
 	}
 
-	return `${prefix}.${
-		[...layoutEl.classList].filter((c) => /ct-layout-.*/.test(c))[0]
-	} article:not(.ct-ghost-card)`
+	return `section > .entries > *`
 }

@@ -46,6 +46,10 @@ select {
 	background-repeat: no-repeat, repeat;
 	background-size: 8px auto, 100%;
 	background-position: right 10px top 50%, 0 0;
+
+	option {
+		color: initial;
+	}
 }
 
 textarea {

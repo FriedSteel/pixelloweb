@@ -1,6 +1,7 @@
 .woocommerce-info, 
 .woocommerce-error, 
-.woocommerce-message {
+.woocommerce-message,
+.woocommerce-thankyou-order-received {
 	display: flex;
 	position: relative;
 	font-size: 15px;
@@ -12,7 +13,7 @@
 	background: var(--background-color);
 
 	// --listItemSpacing: 0;
-	--listItemSpacing: 0.2em;
+	--listItemSpacing: 0.3em;
 	--listStyleType: none;
 	--linkInitialColor: var(--color);
 
@@ -39,7 +40,9 @@
 		width: 100%;
 	}
 
-	.button {
+	.button,
+	.showlogin,
+	.restore-item {
 		order: 2;
 		--buttonFontSize: 14px;
 		--buttonMinHeight: 45px;
@@ -81,27 +84,18 @@
 	}
 }
 
-.woocommerce-NoticeGroup > ul {
+
+ul.woocommerce-error {
 	flex-direction: column;
+	justify-content: center;
 
-	@include media-breakpoint-up (sm) {
-		align-items: flex-start;
-	}
-}
+	li {
+		display: flex;
+		align-items: center;
+		column-gap: 0.3em;
 
-.woocommerce-notices-wrapper > ul > li {
-	display: flex;
-	align-items: center;
-
-	@include media-breakpoint-down (xs) {
-		align-items: flex-start;
-		flex-direction: column;
-	}
-}
-
-.woocommerce-error {
-	.button {
-		--buttonInitialColor: #b92c3e;
-		--buttonHoverColor: #9c2131;
+		@include media-breakpoint-down (xs) {
+			flex-wrap: wrap;
+		}
 	}
 }

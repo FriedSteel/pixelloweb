@@ -1,9 +1,9 @@
 [data-content="normal"] > article {
 	--block-width: var(--has-wide, var(--container-width));
-	--block-max-width: var(--has-wide, var(--container-max-width));
-	--block-wide-max-width: var(--has-wide, calc(var(--container-max-width) + var(--wide-offset) * 2));
+	--block-max-width: var(--has-wide, var(--normal-container-max-width));
+	--block-wide-max-width: var(--has-wide, calc(var(--normal-container-max-width) + var(--wide-offset) * 2));
 
-	--boxed-content-max-width: var(--container-max-width);
+	--boxed-content-max-width: var(--normal-container-max-width);
 }
 
 [data-content="narrow"] > article {
@@ -19,8 +19,11 @@
 [class*="ct-container"] > article {
 	--has-background: var(--has-boxed);
 	--has-boxed-structure: var(--has-boxed);
+	--wp--style--global--content-size: var(--block-max-width);
+	--wp--style--global--wide-size: var(--block-wide-max-width);
 	
 	box-shadow: var(--has-boxed, var(--box-shadow));
+	border: var(--has-boxed, var(--boxed-content-border));
 	border-radius: var(--has-boxed, var(--border-radius));
 	padding: var(--has-boxed, var(--boxed-content-spacing));
 

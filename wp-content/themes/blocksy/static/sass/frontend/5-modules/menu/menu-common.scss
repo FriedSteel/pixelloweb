@@ -28,12 +28,6 @@ nav[class*="menu"] {
 			}
 		}
 	}
-
-
-	// highlighted element with JS
-	li > a.ct-highlight {
-		color: var(--linkActiveColor, var(--linkHoverColor));
-	}
 }
 
 

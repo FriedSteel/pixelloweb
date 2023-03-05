@@ -7,8 +7,11 @@
 // solid and padded
 [data-dropdown*='solid'] .sub-menu li,
 [data-dropdown*='padded'] .sub-menu li {
-	a:hover,
-	&.current-menu-item > a {
+	
+	// a:hover,
+	// &.current-menu-item > a,
+	&:hover > a,
+	&[class*="current-menu-"] > a {
 		background-color: var(--dropdown-background-hover-color, rgba(255, 255, 255, 0.03));
 	}
 }

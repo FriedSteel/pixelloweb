@@ -112,9 +112,9 @@ const getAllVariables = () => {
 				},
 			],
 
-			// Page Hero
 			...getSingleContentVariablesFor(),
 
+			// Page Hero
 			...getHeroVariables(),
 
 			...getPostListingVariables(),
@@ -226,6 +226,14 @@ const getAllVariables = () => {
 							spacious: '2em',
 						}[value]),
 				},
+
+				{
+					selector: ':root',
+					variable: 'has-content-spacing',
+					extractValue: (value) => {
+						return value === 'none' ? '0' : '1'
+					},
+				},
 			],
 
 			// Buttons
@@ -326,7 +334,7 @@ const getAllVariables = () => {
 			// Layout
 			maxSiteWidth: {
 				selector: ':root',
-				variable: 'container-max-width',
+				variable: 'normal-container-max-width',
 				unit: 'px',
 			},
 

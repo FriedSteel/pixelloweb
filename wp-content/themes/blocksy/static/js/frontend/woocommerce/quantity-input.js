@@ -2,26 +2,24 @@ import $ from 'jquery'
 
 const listenToClicks = () =>
 	[...document.querySelectorAll('.quantity')].map((singleQuantity) => {
-		if (singleQuantity.querySelector('.ct-increase')) {
-			;[...singleQuantity.querySelectorAll('input')].map((input) => {
-				if (input.hasInputListener) {
-					return
-				}
-				input.hasInputListener = true
+		;[...singleQuantity.querySelectorAll('input')].map((input) => {
+			if (input.hasInputListener) {
+				return
+			}
+			input.hasInputListener = true
 
-				input.addEventListener('input', (e) => {
-					if (input.closest('tr')) {
-						;[
-							...input
-								.closest('tr')
-								.querySelectorAll('.quantity input'),
-						]
-							.filter((i) => i !== input)
-							.map((input) => (input.value = e.target.value))
-					}
-				})
+			input.addEventListener('input', (e) => {
+				if (input.closest('tr')) {
+					;[
+						...input
+							.closest('tr')
+							.querySelectorAll('.quantity input'),
+					]
+						.filter((i) => i !== input)
+						.map((input) => (input.value = e.target.value))
+				}
 			})
-		}
+		})
 	})
 
 let mounted = false
@@ -39,7 +37,7 @@ export const mount = (el, { event }) => {
 
 	if (el.classList.contains('ct-increase')) {
 		const max = input.getAttribute('max')
-			? parseFloat(input.getAttribute('max'), 0)
+			? parseFloat(input.getAttribute('max'), 0) || Infinity
 			: Infinity
 
 		input.value =

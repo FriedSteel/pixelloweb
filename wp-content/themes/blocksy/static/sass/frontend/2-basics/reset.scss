@@ -123,8 +123,19 @@ a {
 // focus
 a,
 button {
+	// &:focus {
+	// 	transition: none;
+	// 	outline-offset: var(--outline-offset, 3px);
+	// 	outline-color: var(--paletteColor2);
+	// }
+
 	&:focus {
 		transition: none;
+		outline-width: 0;
+	}
+
+	&:focus-visible {
+		outline-width: 2px;
 		outline-offset: var(--outline-offset, 3px);
 		outline-color: var(--paletteColor2);
 	}
@@ -153,8 +164,7 @@ video {
 embed,
 iframe,
 object,
-video,
-figure {
+video {
 	max-width: 100%;
 }
 
@@ -184,7 +194,8 @@ samp,
 pre {
 	tab-size: 4;
 	border-radius: 2px;
-	background: rgba(233, 235, 239, 0.5);
+	// background: rgba(233, 235, 239, 0.5);
+	background: var(--paletteColor6);
 
 	&:focus {
 		outline: none;
@@ -221,7 +232,7 @@ td {
 
 th,
 td {
-	text-align: left;
+	// text-align: left;
 	padding: var(--table-padding, 0.7em 1em);
 }
 

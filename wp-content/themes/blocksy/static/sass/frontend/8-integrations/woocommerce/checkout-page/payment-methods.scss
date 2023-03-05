@@ -1,13 +1,12 @@
 .woocommerce-checkout-payment {
-	margin-top: 40px;
+	// margin-top: 40px;
 
 	@include media-breakpoint-down (sm) {
 		position: relative;
 		margin-left: calc(26px * -1);
 		margin-right: calc(26px * -1);
-	}
+	}	
 
-	// place order
 	.place-order {
 		margin-top: 30px;
 
@@ -30,7 +29,7 @@
 
 
 // payment methods
-.payment_methods {
+#payment .payment_methods {
 	> li {
 		position: relative;
 		border: 1px solid var(--border-color);
@@ -42,9 +41,10 @@
 		> label {
 			display: flex;
 			align-items: center;
-			padding: 0 25px;
 			margin: 0;
-			height: 60px;
+			padding: 18px 25px;
+			// padding: 0 25px;
+			// height: 60px;
 			cursor: pointer;
 			font-size: 15px;
 			font-weight: 600;
@@ -110,6 +110,10 @@
 		// notification
 		&.woocommerce-notice {
 			border: none;
+
+			@include media-breakpoint-down (sm) {
+				margin: 0 25px;
+			}
 		}
 	}
 }

@@ -117,5 +117,21 @@ export const familyForDisplay = (family) => {
 		return __('System Default', 'blocksy')
 	}
 
+	if (family === 'Default') {
+		return __('Default', 'blocksy')
+	}
+
 	return family
+}
+
+export const humanizeFontSource = (source) => {
+	let titles = {
+		system: __('System Font', 'blocksy'),
+		'local-google-fonts': __('Local Google Font', 'blocksy'),
+		typekit: __('Adobe Font', 'blocksy'),
+		file: __('Custom Font', 'blocksy'),
+		google: __('Google Font', 'blocksy'),
+	}
+
+	return titles[source] || source
 }
