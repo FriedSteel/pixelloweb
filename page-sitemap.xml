@@ -2,9 +2,12 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://pixello.co.in/</loc>
-		<lastmod>2023-08-19T06:26:14+00:00</lastmod>
+		<lastmod>2023-08-26T14:34:45+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/08/ott-combo.jpg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2023/05/linkedin-logo.png</image:loc>
@@ -52,22 +55,71 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://pixello.co.in/pricing/p1/</loc>
-		<lastmod>2023-08-19T06:44:42+00:00</lastmod>
+		<loc>https://pixello.co.in/pricing/p2/</loc>
+		<lastmod>2023-08-26T15:21:37+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/08/otp.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/08/about_logo.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/08/moneycontrol-pro-logo.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/04/cricbuzz-logo.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/08/nammaflix-logo.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/08/logo-192_192.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/Altbalaji_Logo-1.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/08/sun-nxt-logo.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/03/curiositystream-logo.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/03/1_SwiSP7_QpWeKlGC1tcip2w.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/Avira_Antivirus_Logo.svg.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/Untitled-design-3.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/01/developer.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/06/1password-logo.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/icons8-research-100.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://pixello.co.in/pricing/p1/</loc>
+		<lastmod>2023-08-26T15:22:44+00:00</lastmod>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/01/adobe-cc-logo.png</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2023/07/autodesk-logo.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/06/about_logo.png</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/02/shemaroome-mod-apk.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/05/logo-192_192.png</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2023/02/sun-nxt-logo.jpg</image:loc>
@@ -91,6 +143,9 @@
 			<image:loc>https://pixello.co.in/wp-content/uploads/2023/01/pharmeasy-logo.jpg</image:loc>
 		</image:image>
 		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/08/netmeds-logo.jpg</image:loc>
+		</image:image>
+		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2023/01/urban-company-logo.png</image:loc>
 		</image:image>
 		<image:image>
@@ -110,49 +165,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/03/Untitled-design-4.png</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://pixello.co.in/pricing/p2/</loc>
-		<lastmod>2023-08-19T12:51:32+00:00</lastmod>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/08/otp.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/06/barbeque-nation-seeklogo.com_.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/06/cinema-and-entertainment-2021-08-26-22-39-52-utc-1-1.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/04/cricbuzz-logo.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/Altbalaji_Logo-1.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/03/curiositystream-logo.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/03/1_SwiSP7_QpWeKlGC1tcip2w.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/Avira_Antivirus_Logo.svg.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/Untitled-design-3.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/01/developer.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/06/1password-logo.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/icons8-research-100.png</image:loc>
 		</image:image>
 	</url>
 </urlset>
