@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://pixello.co.in/</loc>
-		<lastmod>2023-09-07T13:09:23+00:00</lastmod>
+		<lastmod>2023-09-09T15:02:09+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
@@ -52,61 +52,6 @@
 		<lastmod>2023-06-11T07:14:05+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://pixello.co.in/pricing/p1/</loc>
-		<lastmod>2023-09-04T08:02:20+00:00</lastmod>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/01/adobe-cc-logo.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/07/autodesk-logo.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/02/shemaroome-mod-apk.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/kukufm-logo-1.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/03/5dfc8c5b8d6fd.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/05/microsoft-5.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/05/office-2.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/05/office-2.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/01/pharmeasy-logo.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/08/netmeds-logo.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/01/urban-company-logo.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/02/lenskart-logo.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/magzter-logo.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/placeholder-logo-removebg-preview.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/03/Untitled-design-4.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/09/developer.png</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -165,6 +110,61 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/icons8-research-100.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://pixello.co.in/pricing/p1/</loc>
+		<lastmod>2023-09-10T13:53:11+00:00</lastmod>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/01/adobe-cc-logo.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/07/autodesk-logo.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/02/shemaroome-mod-apk.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/kukufm-logo-1.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/03/5dfc8c5b8d6fd.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/05/microsoft-5.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/05/office-2.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/05/office-2.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/01/pharmeasy-logo.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/08/netmeds-logo.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/01/urban-company-logo.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/02/lenskart-logo.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/magzter-logo.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/placeholder-logo-removebg-preview.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/03/Untitled-design-4.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/09/developer.png</image:loc>
 		</image:image>
 	</url>
 </urlset>
