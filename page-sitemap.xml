@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://pixello.co.in/</loc>
-		<lastmod>2024-01-06T17:38:59+00:00</lastmod>
+		<lastmod>2024-01-11T12:31:00+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
@@ -82,13 +82,17 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://pixello.co.in/pricing/p1/</loc>
-		<lastmod>2023-12-30T10:46:58+00:00</lastmod>
+		<loc>https://pixello.co.in/tc/</loc>
+		<lastmod>2024-01-06T17:15:22+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
+	</url>
+	<url>
+		<loc>https://pixello.co.in/pricing/p1/</loc>
+		<lastmod>2024-01-11T12:23:56+00:00</lastmod>
 		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/01/adobe-cc-logo.png</image:loc>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2023/07/autodesk-logo.png</image:loc>
@@ -125,13 +129,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2023/09/developer.png</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://pixello.co.in/tc/</loc>
-		<lastmod>2024-01-06T17:15:22+00:00</lastmod>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
 	</url>
 </urlset>
