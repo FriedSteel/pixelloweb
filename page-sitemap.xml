@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://pixello.co.in/</loc>
-		<lastmod>2024-03-10T13:10:18+00:00</lastmod>
+		<lastmod>2024-03-10T14:08:33+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
@@ -48,8 +48,15 @@
 		</image:image>
 	</url>
 	<url>
+		<loc>https://pixello.co.in/tc/</loc>
+		<lastmod>2024-03-10T13:29:30+00:00</lastmod>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://pixello.co.in/pricing/p1/</loc>
-		<lastmod>2024-03-02T11:28:04+00:00</lastmod>
+		<lastmod>2024-03-10T14:44:50+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
@@ -92,7 +99,7 @@
 	</url>
 	<url>
 		<loc>https://pixello.co.in/pricing/p2/</loc>
-		<lastmod>2024-03-10T11:37:20+00:00</lastmod>
+		<lastmod>2024-03-10T14:56:59+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
@@ -119,13 +126,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/icons8-research-100.png</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://pixello.co.in/tc/</loc>
-		<lastmod>2024-03-10T12:48:51+00:00</lastmod>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
 	</url>
 </urlset>
