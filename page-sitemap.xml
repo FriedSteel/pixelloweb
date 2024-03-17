@@ -2,27 +2,21 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://pixello.co.in/</loc>
-		<lastmod>2024-03-17T07:24:12+00:00</lastmod>
+		<lastmod>2024-03-17T13:00:40+00:00</lastmod>
 		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2024/03/pixello-front-frame.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/05/linkedin-logo.png</image:loc>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2024/03/pixello-front-frame.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/09/iptv-logo.jpg</image:loc>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2024/03/honest-1.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/10/Zee5_Official_logo.svg.png</image:loc>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2024/03/responsible-1.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/10/sonyliv-logo-freelogovectors.net_-1-1-1.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/01/healthifyme-1581940696370.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/109096943_10157389109972694_7002764079167571898_n.png</image:loc>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2024/03/love.png</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -55,8 +49,8 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://pixello.co.in/pricing/p2/</loc>
-		<lastmod>2024-03-10T14:56:59+00:00</lastmod>
+		<loc>https://pixello.co.in/pricing/2/</loc>
+		<lastmod>2024-03-17T12:51:33+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
@@ -86,8 +80,8 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://pixello.co.in/pricing/p1/</loc>
-		<lastmod>2024-03-10T16:38:26+00:00</lastmod>
+		<loc>https://pixello.co.in/pricing/1/</loc>
+		<lastmod>2024-03-17T12:54:06+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
@@ -126,6 +120,31 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2023/09/developer.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://pixello.co.in/pricing/</loc>
+		<lastmod>2024-03-17T12:57:51+00:00</lastmod>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/05/linkedin-logo.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/09/iptv-logo.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/10/Zee5_Official_logo.svg.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/10/sonyliv-logo-freelogovectors.net_-1-1-1.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/01/healthifyme-1581940696370.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/109096943_10157389109972694_7002764079167571898_n.png</image:loc>
 		</image:image>
 	</url>
 </urlset>
