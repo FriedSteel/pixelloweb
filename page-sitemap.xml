@@ -49,31 +49,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://pixello.co.in/pricing/</loc>
-		<lastmod>2024-03-24T06:30:17+00:00</lastmod>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/05/linkedin-logo.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2023/09/iptv-logo.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/10/Zee5_Official_logo.svg.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/10/sonyliv-logo-freelogovectors.net_-1-1-1.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2022/01/healthifyme-1581940696370.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/109096943_10157389109972694_7002764079167571898_n.png</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://pixello.co.in/pricing/2/</loc>
 		<lastmod>2024-03-24T06:48:46+00:00</lastmod>
 		<image:image>
@@ -106,7 +81,7 @@
 	</url>
 	<url>
 		<loc>https://pixello.co.in/pricing/1/</loc>
-		<lastmod>2024-03-24T11:45:47+00:00</lastmod>
+		<lastmod>2024-03-24T12:47:06+00:00</lastmod>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
 		</image:image>
@@ -148,6 +123,31 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://pixello.co.in/wp-content/uploads/2023/09/developer.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://pixello.co.in/pricing/</loc>
+		<lastmod>2024-03-25T15:03:17+00:00</lastmod>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/11/pixello-homepage-thumbnail.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/05/linkedin-logo.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2023/09/iptv-logo.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/10/Zee5_Official_logo.svg.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/10/sonyliv-logo-freelogovectors.net_-1-1-1.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2022/01/healthifyme-1581940696370.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://pixello.co.in/wp-content/uploads/2021/12/109096943_10157389109972694_7002764079167571898_n.png</image:loc>
 		</image:image>
 	</url>
 </urlset>
